@@ -1,0 +1,76 @@
+#SanitizeDialog {
+  height: 0 !important;
+  max-height: 0 !important;
+}
+
+#sanitizeDurationChoice {
+  -moz-margin-end: 0;
+}
+
+/* Align the duration label with the warning box and item list */
+#sanitizeDurationLabel {
+  -moz-margin-start: 3px;
+}
+
+
+/* Hide the duration dropdown suffix label if it's empty.  Otherwise it
+   takes up a little space, causing the end of the dropdown to not be aligned
+   with the warning box. */
+#sanitizeDurationSuffixLabel[value=""] {
+  display: none;
+}
+
+
+/* Places tree */
+#placesTreechildren::-moz-tree-row(selected),
+#placesTreechildren::-moz-tree-row(grippyRow) {
+  background: #999;
+}
+
+#placesTreechildren::-moz-tree-cell-text(selected) {
+  color: #111;
+}
+
+
+/* Sanitize everything warning box */
+#sanitizeEverythingWarningBox {
+  padding: 4px 8px;
+  -moz-border-start: 5px solid #e3c800;
+}
+
+#sanitizeEverythingWarningIcon {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sanitizeEverythingWarningDescBox {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Progressive disclosure button */
+#detailsExpanderWrapper {
+  padding: 0;
+  margin: 6px 0;
+}
+
+/* Make the item list the same width as the warning box */
+#itemList {
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+}
+
+
+/* Align the last dialog button with the end of the warning box */
+.prefWindow-dlgbuttons {
+  -moz-margin-end: 0;
+}
+.dialog-button[dlgtype="cancel"] {
+  -moz-margin-end: 0;
+}
+
+spacer {
+  display: none !important;
+}

@@ -1,0 +1,27 @@
+/* Tab Modal Prompt boxes */
+tabmodalprompt
+{
+	background-color: rgba(0, 0, 0, .45);
+	font-family: var(--font-segoesemilight);
+	font-size: 11pt;
+}
+
+.mainContainer
+{
+	color: #000;
+}
+
+tabmodalprompt > hbox
+{
+	background-color: #FFF;
+}
+
+.topContainer
+{
+	padding: 10px;
+}
+
+.buttonContainer
+{
+	padding: 20px 0;
+}

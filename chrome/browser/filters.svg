@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+	<!-- Dark theme - inverted -->
+	<filter id="dark-inverted">
+		<feFlood flood-color="#FFF" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- Dark theme - base -->
+	<filter id="dark-base">
+		<feFlood flood-color="hsl(0, 0%, 11%)" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- Light theme - inverted -->
+	<filter id="light-inverted">
+		<feFlood flood-color="hsl(0, 0%, 11%)" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- Light theme - base -->
+	<filter id="light-base">
+		<feFlood flood-color="hsl(0, 0%, 89%)" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- All themes - tab bar -->
+	<filter id="tabbar">
+		<feFlood flood-color="#282828" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- All themes - white -->
+	<filter id="white">
+		<feFlood flood-color="#FFF" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	  </filter>
+	<!-- All themes - black -->
+	<filter id="black">
+		<feFlood flood-color="#000" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+	<!-- All themes - accent -->
+	<filter id="accent">
+		<feFlood flood-color="hsl(40, 100%, 44%)" result="tint"/>
+		<feComposite in="tint" in2="SourceGraphic" operator="in"/>
+	</filter>
+  </defs>
+</svg>

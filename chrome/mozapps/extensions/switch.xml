@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl"
+		  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		  xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="switch"
+			 extends="chrome://global/content/bindings/button.xml#button">
+		<content orient="vertical">
+			<xul:hbox class="switch-stack">
+				<xul:box class="switch-thumb"/>
+			</xul:hbox>
+		</content>
+	</binding>
+</bindings>

@@ -1,0 +1,25 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+richlistbox[disabled=true]
+{
+	color: var(--text-light-40);
+}
+
+richlistitem
+{
+	background-clip: padding-box;
+	color: var(--text-light-regular);
+	padding: 2px;
+	border-bottom: 1px solid var(--light-highlight);
+}
+
+richlistitem:last-of-type
+{
+	border-bottom-width: 0;
+}
+
+richlistitem[selected=true]:not([type=download]):not(.addon-view)
+{
+	background-color: var(--light);
+	color: var(--dark);
+}

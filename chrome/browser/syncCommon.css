@@ -1,0 +1,44 @@
+/* The following are used by both sync/setup.xul and sync/genericChange.xul */
+
+.statusIcon
+{
+	display: none;
+}
+
+.statusIcon[status="active"] + .status
+{
+	color: var(--chrome-base);
+}
+
+.statusIcon[status="error"] + .status
+{
+	color: var(--error);
+}
+
+.statusIcon[status="success"] + .status
+{
+	color: var(--info);
+}
+
+/* .data is only used by sync/genericChange.xul, but it seems unnecessary to have
+   a separate stylesheet for it. */
+.data {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+dialog#change-dialog {
+  width: 40em;
+}
+
+image#syncIcon {
+  list-style-image: url("chrome://browser/skin/sync-32.png");
+}
+
+#introText {
+  margin-top: 2px;
+}
+
+#feedback {
+  height: 2em;
+}

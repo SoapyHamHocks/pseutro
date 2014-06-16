@@ -1,0 +1,77 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+findbar
+{
+	min-width: 1px;
+	background-color: var(--dark-base);
+	-moz-padding-start: 5px;
+}
+
+.findbar-find-status
+{
+	margin: 0 !important;
+	-moz-margin-start: 3px !important;
+	padding: 2px !important;
+}
+
+.findbar-textbox[status=notfound] ~ .findbar-find-status
+{
+	color: #F66;
+}
+
+.findbar-textbox[status=notfound]
+{
+	background-color: #F66;
+	color: #FFF;
+}
+
+.findbar-textbox[flash=true]
+{
+	background-color: #F0A30A;
+	color: #FFF;
+}
+
+.find-status-icon[status=pending]
+{
+	list-style-image: url(chrome://global/skin/icons/loading_16.png);
+}
+
+findbar toolbarbutton
+{
+	border-top-width: 6px;
+	border-bottom-width: 6px;
+}
+
+.findbar-find-next,
+.findbar-find-previous
+{
+	list-style-image: url(chrome://browser/skin/SVGs/dropdown-arrow.svg);
+	padding: 0 7px 0;
+}
+
+.findbar-find-next > .toolbarbutton-icon,
+.findbar-find-previous > .toolbarbutton-icon
+{
+	filter: var(--fill-light-base);
+}
+
+.findbar-find-next:hover:active:not([disabled]) > .toolbarbutton-icon,
+.findbar-find-previous:hover:active:not([disabled]) > .toolbarbutton-icon
+{
+	filter: var(--fill-dark-base);
+}
+
+.findbar-find-next > .toolbarbutton-icon
+{
+	transform: translateY(1px);
+}
+
+.findbar-find-previous > .toolbarbutton-icon
+{
+	transform: scaleY(-1) translateY(1px);
+}
+
+.findbar-closebutton
+{
+	-moz-padding-end: 11px !important;
+}

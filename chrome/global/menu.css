@@ -1,0 +1,222 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* ::::: menu/menuitem ::::: */
+
+
+menuitem[default=true]
+{
+	font-weight: bold;
+}
+
+menu[disabled=true],
+menuitem[disabled=true],
+.splitmenu-menuitem[disabled=true],
+menu[_moz-menuactive=true][disabled=true],
+menuitem[_moz-menuactive=true][disabled=true],
+.splitmenu-menuitem[_moz-menuactive=true][disabled=true]
+{
+	color: #666;
+}
+
+menuitem.spell-suggestion
+{
+	font-weight: bold;
+}
+
+/* ..... internal content .... */
+
+.menu-accel,
+.menu-iconic-accel,
+.menu-text,
+.menu-iconic-text
+{
+	margin: 0 !important;
+	padding: 0;
+}
+
+.menu-text
+{
+	-moz-padding-start: 2em !important;
+}
+
+.menu-text,
+.menu-iconic-text
+{
+	font-weight: inherit;
+}
+
+.menu-description
+{
+	font-style: italic;
+	color: #666;
+	-moz-margin-start: 1ex !important;
+}
+
+.menu-accel,
+.menu-iconic-accel
+{
+	color: #666;
+	-moz-margin-start: 0.74em !important;
+	-moz-margin-end: 1.35em !important;
+}
+
+menu[disabled=true] .menu-accel,
+menuitem[disabled=true] .menu-iconic-accel
+{
+	color: #999;
+}
+
+.menu-iconic-left
+{
+	margin: 0;
+	max-width: 2em;
+	width: 2em;
+	min-width: 2em;
+	-moz-box-pack: center;
+	-moz-box-align: center;
+}
+
+.menu-iconic-icon
+{
+	width: 16px;
+	height: 16px;
+}
+
+/* ..... menu arrow box ..... */
+
+.menu-right
+{
+	margin: 0;
+	-moz-margin-end: 5px;
+	list-style-image: url(arrow/menu-arrowright.png);
+	-moz-image-region: auto;
+	width: 13px;
+	height: 13px;
+}
+
+/* ::::: menu/menuitems in menubar ::::: */
+
+menubar > menu
+{
+	color: inherit;
+}
+
+menubar > menu:not(:-moz-any([open], :hover:active, [disabled=true]))[_moz-menuactive]
+{
+	background-color: var(--light-highlight);
+}
+
+menubar > menu:-moz-any([open], :hover:active:not([disabled=true]))[_moz-menuactive]
+{
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+/* ..... internal content .... */
+
+.menubar-left
+{
+	color: inherit;
+}
+
+/* ::::: menu/menuitems in popups ::::: */
+
+menupopup > menu,
+menupopup > menuitem
+{
+	max-width: 42em;
+}
+
+menu,
+menuitem
+{
+	background: transparent padding-box;
+	padding: 4px;
+	max-width: none;
+	color: var(--popup-dark);
+	-moz-box-align: center;
+	list-style-image: none;
+	-moz-image-region: auto;
+}
+
+.splitmenu-menuitem
+{
+	padding: 4px;
+}
+
+menuitem:not([disabled=true])[_moz-menuactive],
+menu:not([disabled=true])[_moz-menuactive],
+.splitmenu-menuitem:not([disabled=true])[_moz-menuactive]
+{
+	background-color: var(--popup-dark-highlight);
+}
+
+.splitmenu-menu[_moz-menuactive]:not([open])
+{
+	background-color: transparent;
+}
+
+.menulist-menupopup > menuitem > .menu-iconic-left,
+menulist > menupopup > menuitem > .menu-iconic-left,
+.menulist-menupopup > menu > .menu-iconic-left,
+menulist > menupopup > menu > .menu-iconic-left
+{
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menulist-menupopup > menuitem > label,
+menulist > menupopup > menuitem > label,
+.menulist-menupopup > menu > label,
+menulist > menupopup > menu > label
+{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+menulist > menupopup > menuitem > .menu-iconic-text
+{
+	margin: 0 !important;
+}
+
+/* ::::: checkbox and radio menuitems ::::: */
+
+menuitem[type=checkbox] > .menu-iconic-left,
+menuitem[type=radio] > .menu-iconic-left
+{
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: var(--fill-popup-dark);
+	transform: translate(0);
+}
+
+menuitem[type=checkbox][checked=true] > .menu-iconic-left
+{
+	background-image: -moz-image-rect(url(icons/menuitem-check.png), 0, 12, 12, 0);
+}
+
+menuitem[type=radio][checked=true] > .menu-iconic-left
+{
+	background-image: -moz-image-rect(url(icons/menuitem-radio), 0, 12, 12, 0);
+}
+
+/* ::::: menuseparator ::::: */
+
+menuseparator
+{
+	max-height: 1px;
+	height: 1px;
+	min-height: 1px;
+	background-color: var(--popup-dark-highlight-24);
+	margin: .5em 1em;
+	padding: 0;
+}
+
+/* ::::: autocomplete ::::: */
+
+.autocomplete-history-popup > menuitem
+{
+	max-width: none !important;
+	font: message-box;
+}

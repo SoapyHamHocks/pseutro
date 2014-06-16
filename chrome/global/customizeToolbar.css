@@ -1,0 +1,54 @@
+#main-box > separator
+{
+	display: none;
+}
+
+#instructions
+{
+	font-family: var(--font-segoelight);
+	font-size: 2em;
+}
+
+#main-box
+{
+	background-color: var(--dark-base);
+}
+
+#palette-box
+{
+	background-color: var(--light-highlight);
+}
+
+#palette-box > toolbarpaletteitem
+{
+	padding: 8px 2px;
+	margin: 0 8px;
+}
+
+#main-box > hbox
+{
+	padding: 5px;
+}
+
+#main-box > box
+{
+	height: 36px;
+	padding: 5px;
+	position: fixed;
+	bottom: 2px;
+}
+
+#main-box > box:-moz-locale-dir(ltr)
+{
+	left: 0;
+}
+
+#main-box > box:-moz-locale-dir(rtl)
+{
+	right: 0;
+}
+
+#donebutton
+{
+	margin: 0;
+}

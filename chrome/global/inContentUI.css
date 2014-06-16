@@ -1,0 +1,41 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+/* Page background */
+*|*:root
+{
+	-moz-appearance: none;
+	background: #FFF;
+	color: #000;
+}
+
+html|html
+{
+	font: message-box;
+}
+
+/* Content */
+*|*.main-content
+{
+	/* Needed to allow the radius to clip the inner content, see bug 595656 */
+	overflow: hidden;
+}
+
+colorpicker[type=button]
+{
+	margin: 1px 5px 2px 5px;
+	padding: 3px;
+	height: 25px;
+}
+
+textbox
+{
+	background-color: hsla(0, 0%, 100%, .9);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, .1);
+}
+
+textbox[focused]
+{
+	background-color: #FFF;
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+}

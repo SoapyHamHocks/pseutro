@@ -1,0 +1,153 @@
+/* :::::::::: button :::::::::: */
+
+button
+{
+	margin: 2px 6px;
+	min-width: 6.3em;
+	font-size: 9pt;
+	background-color: var(--button-normal);
+}
+
+.button-box
+{
+	border: 1px solid transparent;
+	padding: 4px 6px;
+}
+
+.button-text
+{
+	margin: 0 !important;
+	text-align: center;
+	font-weight: 500;
+}
+
+button:-moz-focusring > .button-box
+{
+	border: 1px dotted #000;
+}
+
+button:not([disabled=true]):hover
+{
+	background-color: var(--button-hover);
+}
+
+button[default]
+{
+	color: var(--light);
+	background-color: var(--chrome-base);
+}
+
+button[default]:not([disabled=true]):hover
+{
+	background-color: var(--chrome-light);
+}
+
+button:not([disabled=true]):not([buttondown]):-moz-any(:hover:active, [open], [checked])
+{
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+/* .......... disabled state .......... */
+
+button[disabled=true]
+{
+	opacity: .4;
+}
+
+/* .......... menu buttons .......... */
+
+button[type=menu-button]
+{
+	border: 0;
+	background: 0 !important;
+	padding: 0;
+	-moz-box-align: stretch;
+}
+
+.button-menubutton-button
+{
+	margin: 0;
+}
+
+.button-menubutton-dropmarker
+{
+	background-color: var(--button-normal);
+}
+
+.button-menubutton-dropmarker > .dropmarker-icon
+{
+	filter: var(--fill-dark-base);
+}
+
+button:not([buttonover]):hover > .button-menubutton-dropmarker
+{
+	background-color: var(--light-highlight);
+}
+
+button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker
+{
+	background-color: var(--light);
+}
+
+button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker > .dropmarker-icon
+{
+	filter: var(--fill-light-base);
+}
+
+/* panel / tabprompt buttons */
+
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button,
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) .button-menubutton-dropmarker
+{
+	background-color: var(--popup-button-normal);
+	color: var(--popup-dark);
+}
+
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):hover,
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttonover]):hover > .button-menubutton-dropmarker
+{
+	background-color: var(--popup-button-hover);
+}
+
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):-moz-any(:hover:active, [open], [checked]),
+:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker
+{
+	background-color: var(--popup-dark);
+	color: var(--popup-light);
+}
+
+/* .......... dropmarkers .......... */
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker
+{
+	width: 10px;
+	height: 8px;
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain
+{
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+button[type=disclosure]
+{
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-appearance: none;
+	list-style-image: url(chrome://global/skin/tree/dark/twisty.png);
+	-moz-image-region: rect(0 9px 9px 0);
+	min-width: 0 !important;
+	background-color: transparent;
+}
+
+button[type=disclosure][open=true]
+{
+	-moz-image-region: rect(0 18px 9px 9px);
+}

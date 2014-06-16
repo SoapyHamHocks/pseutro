@@ -1,0 +1,39 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+notification
+{
+	background-color: var(--dark-base);
+	background-repeat: repeat;
+}
+
+notification[type=info]
+{
+	background-image: url(chrome://mozapps/skin/extensions/stripes-info.png);
+}
+
+notification[type=warning]
+{
+	background-image: url(chrome://mozapps/skin/extensions/stripes-warning.png);
+}
+
+notification[type=critical]
+{
+	background-image: url(chrome://mozapps/skin/extensions/stripes-error.png);
+}
+
+.messageImage
+{
+	display: none;
+}
+
+/* Popup notification */
+
+.popup-notification-description
+{
+	max-width: 24em;
+}
+
+.popup-notification-closebutton
+{
+	filter: var(--fill-popup-dark) !important;
+}

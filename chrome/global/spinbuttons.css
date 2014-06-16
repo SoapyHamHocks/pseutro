@@ -1,0 +1,74 @@
+@import url(vars.css);
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+spinbuttons
+{
+	-moz-appearance: none;
+	border: 0;
+	background: none;
+	cursor: default;
+	-moz-margin-start: 6px;
+}
+
+spinbuttons[disabled]
+{
+	filter: var(--fill-light-base);
+}
+
+.spinbuttons-box
+{
+	-moz-box-orient: horizontal;
+}
+
+.spinbuttons-button
+{
+	min-width: 12px;
+	min-height: 11px;
+	margin: 0 !important;
+	border: 0;
+	background: none;
+	padding: 0;
+	-moz-image-region: auto;
+}
+
+.spinbuttons-button > .button-box
+{
+	border: 0;
+}
+
+.spinbuttons-button:not([disabled]):hover
+{
+	background-color: var(--dark-highlight);
+}
+
+.spinbuttons-button:not([disabled]):hover:active
+{
+	background-color: var(--dark);
+}
+
+.spinbuttons-button:not([disabled]):hover:active .button-icon
+{
+	filter: var(--fill-light-base);
+}
+
+.spinbuttons-button[disabled="true"]
+{
+	opacity: .4;
+}
+
+.spinbuttons-up,
+.spinbuttons-down
+{
+	-moz-appearance: none;
+}
+
+.spinbuttons-up
+{
+	list-style-image: url(chrome://browser/skin/SVGs/zoomin.svg);
+}
+
+
+.spinbuttons-down
+{
+	list-style-image: url(chrome://browser/skin/SVGs/zoomout.svg);
+}

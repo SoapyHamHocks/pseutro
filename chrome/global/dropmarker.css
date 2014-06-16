@@ -1,0 +1,19 @@
+dropmarker
+{
+	-moz-box-align: center;
+	-moz-box-pack: center;
+	padding: 0 4px;
+	list-style-image: url(chrome://browser/skin/SVGs/dropdown-arrow.svg);
+	-moz-image-region: auto;
+}
+
+.dropmarker-icon
+{
+	filter: var(--fill-light-base);
+	transform: translate(0);
+}
+
+dropmarker:not([disabled]):-moz-any(:hover:active, [open]) > .dropmarker-icon
+{
+	filter: var(--fill-dark-base);
+}

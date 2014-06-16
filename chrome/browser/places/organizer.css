@@ -1,0 +1,58 @@
+/* Toolbar */
+
+#placesToolbar
+{
+	max-height: 36px;
+}
+
+#back-button,
+#forward-button
+{
+	list-style-image: url(chrome://browser/skin/toolbar-icons.png);
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon
+{
+	filter: var(--fill-light-base);
+}
+
+#back-button:not([disabled]):hover:active > .toolbarbutton-icon,
+#forward-button:not([disabled]):hover:active > .toolbarbutton-icon
+{
+	filter: var(--fill-dark-base);
+}
+
+#back-button
+{
+	-moz-image-region: rect(0 18px 18px 0);
+}
+
+#forward-button
+{
+	-moz-image-region: rect(0 36px 18px 18px);
+}
+
+#back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
+#forward-button:-moz-locale-dir(rtl) > .toolbarbutton-icon
+{
+	transform: scaleX(-1);
+}
+
+#placesMenu > .menu-iconic > .menubar-left
+{
+	visibility: collapse;
+}
+
+/* Root View */
+
+/* Info box */
+#detailsDeck
+{
+	padding: 5px;
+}
+
+#infoBoxExpanderLabel
+{
+	-moz-padding-start: 2px;
+}

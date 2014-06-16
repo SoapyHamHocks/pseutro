@@ -1,0 +1,5 @@
+skin	browser			Pseutro					chrome/browser/
+skin	global			Pseutro					chrome/global/
+skin	mozapps			Pseutro					chrome/mozapps/
+skin	communicator	Pseutro					chrome/communicator/
+style	chrome://browser/content/browser.xul	chrome://browser/skin/linux.css		os=linux

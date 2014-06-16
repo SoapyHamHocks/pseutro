@@ -1,0 +1,105 @@
+@font-face
+{
+	font-family: "Segoe UI Light";
+	src: local(Segoe UI Light), local(Segoe UI), local(sans);
+}
+
+@font-face
+{
+	font-family: "Segoe UI Semilight";
+	src: local(Segoe UI Semilight), local(Segoe UI Light), local(Segoe UI), local(sans);
+}
+
+@font-face
+{
+	font-family: "Segoe UI Semibold";
+	src: local(Segoe UI Semibold), local(Segoe UI), local(sans);
+}
+
+@font-face
+{
+	font-family: "Segoe UI";
+	src: local(Segoe UI), local(sans);
+}
+
+/* changing these variables will have a huge impact on the theme */
+:root
+{
+	/* the base colours of the theme (toolbars, icons, and their inverted counterparts, etc.) */
+	--dark-base: hsl(0, 0%, 11%);
+	--light-base: hsl(0, 0%, 100%);
+
+	/* the highlights that complement the base colours (basically used as transparent inversions of base colours for hover effects, etc.) */
+	--dark-highlight: hsla(0, 0%, 0%, .13);
+	--light-highlight-08: hsla(0, 0%, 100%, .08);
+	--light-highlight: hsla(0, 0%, 100%, .13);
+	--light-highlight-15: hsla(0, 0%, 100%, .15);
+	--light-highlight-20: hsla(0, 0%, 100%, .20);
+	--light-highlight-strong: hsla(0, 0%, 100%, .26);
+	--light-highlight-43: hsla(0, 0%, 100%, .43);
+	--light-highlight-80: hsla(0, 0%, 100%, .8);
+	
+	/* used for textboxes */
+	--textbox-normal: hsla(0, 0%, 100%, .8);
+	--textbox-focused: #FFF;
+	--textbox-disabled: hsla(0, 0%, 100%, .4);
+
+	/* used for buttons */
+	--button-normal: hsl(0, 0%, 29%);
+	--button-hover: hsl(0, 0%, 33%);
+
+	/* used for progress bars */
+	--progress-background: hsl(0, 0%, 42%);
+
+	/* used for popup buttons */
+	--popup-button-normal: hsla(0, 0%, 0%, .2);
+	--popup-button-hover: hsla(0, 0%, 0%, .25);
+
+	/*  */
+	--dark: #000;
+	--light: #FFF;
+
+	/* used for text colours */
+	--text-light-22: hsla(0, 0%, 100%, .22);
+	--text-light-40: hsla(0, 0%, 100%, .4);
+	--text-light-regular: hsla(0, 0%, 100%, .6);
+	--text-light-70: hsla(0, 0%, 100%, .7);
+	--text-light-strong: hsla(0, 0%, 100%, .91);
+	--text-dark-regular: hsla(0, 0%, 0%, .6);
+
+	/* used for popups and sometimes other UI that doesn't change between Pseutro and Light */
+	--popup-dark: #000;
+	--popup-light: #FFF;
+	--popup-dark-highlight: hsla(0, 0%, 0%, .13);
+	--popup-dark-highlight-24: hsla(0, 0%, 0%, .24);
+	--popup-dark-highlight-strong: hsla(0, 0%, 0%, .26);
+
+	/* the accent colour */
+	--chrome-base: hsl(40, 100%, 44%);
+	--chrome-light: hsl(40, 92%, 40%);
+	--chrome-dark: hsl(40, 92%, 36%);
+	--chrome-highlight: hsla(40, 100%, 44%, .13);
+
+	/* fonts used */
+	--font-segoe: "Segoe UI", "Open Sans", Ubuntu, sans-serif;
+	--font-segoelight: "Segoe UI Light", "Segoe UI", "Open Sans Light", "Ubuntu Light", sans-serif;
+	--font-segoesemilight: "Segoe UI Semilight", "Segoe UI Light", "Segoe UI", "Open Sans Light", Ubuntu, sans-serif;
+	--font-segoesemibold: "Segoe UI Semibold", "Segoe UI", "Open Sans Semibold", "Ubuntu Medium", sans-serif;
+
+	/* the fills for changing the colour of icons */
+	--fill-light-base: url(chrome://browser/skin/filters.svg#dark-inverted);
+	--fill-dark-base: url(chrome://browser/skin/filters.svg#dark-base);
+	--fill-popup-dark: url(chrome://browser/skin/filters.svg#black);
+	--fill-popup-light: url(chrome://browser/skin/filters.svg#white);
+	--fill-chrome-base: url(chrome://browser/skin/filters.svg#accent);
+	--fill-tabbar: url(chrome://browser/skin/filters.svg#tabbar);
+
+	/* some misc shades that should be inverted between Pseutro and Light (mostly used in tree.css) */
+	--hsl-0-0-65: hsl(0, 0%, 65%);
+	--hsl-0-0-35: hsl(0, 0%, 35%);
+	--hsl-0-0-22: hsl(0, 0%, 22%);
+	--hsl-0-0-16: hsl(0, 0%, 16%);
+
+	--error: #ff6666;
+	--info: #1ba1e2;
+}

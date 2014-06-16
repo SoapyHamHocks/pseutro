@@ -1,0 +1,14 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.groupbox-body
+{
+	padding: inherit;
+}
+
+.caption-text
+{
+	color: var(--light);
+	font-size: 16pt;
+	font-family: var(--font-segoesemilight);
+	margin: 4px 0 !important;
+}

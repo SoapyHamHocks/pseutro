@@ -1,0 +1,61 @@
+@import url(chrome://global/skin/);
+
+#config
+{
+	background-color: var(--dark-base);
+	color: var(--text-light-regular);
+}
+
+#warningScreen > spacer
+{
+	max-height: 134px;
+}
+
+#warningBox
+{
+	font-family: var(--font-segoesemilight);
+	color: var(--text-light-70);
+	font-size: 12pt;
+}
+
+#warningInnerBox
+{
+	max-width: 44em;
+}
+
+#warningTitle
+{
+	font-size: 35pt;
+	color: var(--text-light-strong);
+	font-family: inherit;
+	font-weight: 400;
+	letter-spacing: -1pt;
+	margin: 0 0 .6em 0;
+	-moz-margin-start: .15em;
+}
+
+#showWarningNextTime
+{
+	margin-top: 24px;
+}
+
+#warningButton
+{
+	margin-top: 12px;
+}
+
+#configTreeBody::-moz-tree-cell-text(user)
+{
+	color: var(--chrome-base);
+}
+
+#configTreeBody::-moz-tree-cell-text(locked)
+{
+	font-style: italic;
+	color: var(--text-light-40);
+}
+
+#filterRow
+{
+	-moz-padding-start: 4px;
+}

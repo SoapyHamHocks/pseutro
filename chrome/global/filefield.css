@@ -1,0 +1,19 @@
+/* File Field Widget*/
+
+.fileFieldIcon[disabled=true]
+{
+	opacity: .4;
+}
+
+.fileFieldIcon
+{
+	width: 16px;
+	height: 16px;
+	-moz-margin-start: -22px;
+	transform: translateX(25px);
+}
+
+.fileFieldLabel .textbox-input-box
+{
+	-moz-margin-start: 18px;
+}

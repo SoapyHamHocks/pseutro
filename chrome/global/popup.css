@@ -1,0 +1,125 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: menupopup ::::: */
+
+menupopup,
+panel
+{
+	background: var(--popup-light) padding-box;
+	color: var(--popup-dark);
+	border: 2px solid var(--popup-dark);
+	padding: 0;
+	min-width: 1px;
+	transition-duration: 0 !important;
+}
+
+menupopup > menu > menupopup
+{
+	/* align submenus */
+	-moz-margin-start: -3px;
+	margin-top: -3px;
+}
+
+panel[type=arrow]
+{
+	background: transparent;
+	border: 0;
+}
+
+.panel-arrowcontainer:not([panelopen])[side=top]
+{
+	transform: translateY(-21px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side=bottom]
+{
+	transform: translateY(21px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side=left]
+{
+	transform: translateX(-21px);
+}
+
+.panel-arrowcontainer:not([panelopen])[side=right]
+{
+	transform: translateX(21px);
+}
+
+panel[type=arrow][side=top],
+panel[type=arrow][side=bottom]
+{
+	margin-left: -23px;
+	margin-right: -23px;
+}
+
+panel[type=arrow][side=left],
+panel[type=arrow][side=right]
+{
+	margin-top: -23px;
+	margin-bottom: -23px;
+}
+
+.panel-arrowcontent
+{
+	padding: 10px;
+	color: var(--popup-dark);
+	background-color: var(--popup-light);
+	box-shadow: 0 0 0 2px #000;
+	margin: 4px;
+}
+
+.panel-arrow[side=top],
+.panel-arrow[side=bottom]
+{
+	list-style-image: url(chrome://global/skin/arrow/panelarrow-vertical-white.png);
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.panel-arrow[side=top]
+{
+	margin-bottom: -4px;
+}
+
+.panel-arrow[side=bottom]
+{
+	transform: scaleY(-1);
+	margin-top: -4px;
+}
+
+.panel-arrow[side=left],
+.panel-arrow[side=right]
+{
+	list-style-image: url(chrome://global/skin/arrow/panelarrow-horizontal-white.png);
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.panel-arrow[side=left]
+{
+	margin-right: -4px;
+}
+
+.panel-arrow[side=right]
+{
+	transform: scaleX(-1);
+	margin-left: -4px;
+}
+
+/* ::::: tooltip ::::: */
+
+tooltip
+{
+	background: #FFF padding-box;
+	border: 2px solid #808080;
+	color: var(--popup-dark);
+	padding: 5px;
+}
+
+tooltip[titletip=true]
+{
+	max-width: none;
+}

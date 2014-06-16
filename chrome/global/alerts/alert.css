@@ -1,0 +1,85 @@
+/* ===== alert.css =====================================================
+  == Styles specific to the alerts dialog.
+  ======================================================================= */
+
+@import url(chrome://global/skin/);
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.alertBox
+{
+	background: #FFF padding-box;
+	border: 2px solid #808080;
+	color: #000;
+}
+
+.alertImageBox
+{
+	padding: 8px 0;
+	width: 64px;
+	-moz-border-end: 1px solid rgba(0, 0, 0, .1);
+}
+
+.alertTextBox
+{
+	padding: 8px;
+	-moz-padding-start: 16px;
+	width: 255px;
+	background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .1));
+}
+
+.alertTitle
+{
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#alertImage
+{
+	max-width: 48px;
+	max-height: 48px;
+}
+
+#alertNotification[clickable=true]
+{
+	cursor: pointer;
+}
+
+label
+{
+	cursor: inherit;
+}
+
+.alertText[clickable=true]
+{
+	color: -moz-nativehyperlinktext;
+	text-decoration: underline;
+}
+
+.alertText[clickable=true]:hover:active
+{
+	color: -moz-activehyperlinktext;
+}
+
+@keyframes alert-animation
+{
+	from
+	{
+		opacity: 0;
+	}
+
+	6.25%
+	{
+		opacity: 1;
+	}
+
+	93.75%
+	{
+		opacity: 1;
+	}
+
+	to
+	{
+		opacity: 0;
+	}
+}

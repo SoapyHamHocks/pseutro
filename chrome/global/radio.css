@@ -1,0 +1,79 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* ::::: radio ::::: */
+
+radio
+{
+	-moz-box-align: center;
+	margin: 2px 4px;
+	padding: 2px;
+}
+
+.radio-label-box
+{
+	-moz-margin-start: 3px;
+	border: 1px solid transparent;
+	padding: 0 1px;
+}
+
+.radio-icon
+{
+	-moz-margin-end: 3px;
+}
+
+.radio-label
+{
+	margin: 0 !important;
+}
+
+.radio-check-box1
+{
+	-moz-box-align: center;
+	height: 16px;
+	width: 16px;
+	border: 2px solid var(--light-highlight-strong);
+	border-radius: 1000px;
+	background-clip: padding-box;
+	margin: -2px;
+	filter: var(--fill-light-base);
+	transform: translate(0);
+}
+
+radio:not([disabled]):hover .radio-check-box1
+{
+	border-color: var(--light-highlight-43);
+}
+
+radio:not([disabled]):hover:active .radio-check-box1
+{
+	background-color: var(--light);
+	background-clip: border-box;
+	border-color: var(--light);
+}
+
+radio[selected] .radio-check-box1
+{
+	background-image: url(chrome://global/skin/icons/menuitem-radio.png);
+}
+
+radio[disabled] .radio-check-box1
+{
+	background-color: var(--light-highlight-08);
+	border-color: var(--light-highlight-15);
+}
+
+radio[disabled] .checkbox-label-box
+{
+	opacity: .4;
+}
+
+radio[selected][disabled] .radio-check-box1
+{
+	background-position: -24px 0;
+}
+
+radio[selected]:not([disabled]):hover:active .radio-check-box1
+{
+	background-color: transparent;
+	background-position: -12px 0;
+}

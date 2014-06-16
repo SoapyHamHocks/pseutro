@@ -1,0 +1,100 @@
+/* ===== preferences.css =====================================================
+  == Styles used by the XUL prefwindow element.
+  ======================================================================= */
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* ::::: dialog ::::: */
+
+prefwindow
+{
+	padding: 0;
+	max-width: none !important;
+}
+
+prefpane
+{
+	padding-top: 8px;
+	padding-bottom: 10px;
+	-moz-padding-start: 8px;
+	-moz-padding-end: 10px;
+}
+
+#BrowserPreferences
+{
+	-moz-box-flex: 1;
+	min-height: 46em;
+	min-width: 60em;
+}
+
+prefwindow[type=child]
+{
+	padding-top: 8px;
+	padding-bottom: 10px;
+	-moz-padding-start: 8px;
+	-moz-padding-end: 10px;
+}
+
+prefwindow[type=child] > prefpane
+{
+	padding: 0;
+}
+
+.prefWindow-dlgbuttons
+{
+	padding-bottom: 10px;
+	-moz-padding-start: 8px;
+	-moz-padding-end: 10px;
+}
+
+prefwindow[type=child] .prefWindow-dlgbuttons
+{
+	padding: 0;
+}
+
+radio[pane]
+{
+	margin: 0;
+	padding: 4px;
+	font-size: 14px;
+	padding: 5px 6px 6px;
+	-moz-box-align: start;
+	min-width: 14em;
+	-moz-box-flex: 1;
+	font-size: 12pt;
+}
+
+prefwindow:not([windowtype="Toolkit:PasswordManagerExceptions"]):not([type=child]) .paneDeckContainer
+{
+	-moz-margin-start: -moz-calc(14em + 4px);
+}
+
+.paneSelector
+{
+	-moz-binding: url(chrome://global/skin/globalBindings.xml#vertical-richlistbox);
+	border: 0;
+	padding: 0;
+	height: 100%;
+	max-width: 14em;
+	background-color: hsl(0, 0%, 16%);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.paneButtonIcon
+{
+	display: none;
+}
+
+radio[pane]:hover
+{
+	background-color: var(--light-highlight);
+}
+
+radio[pane]:hover:active,
+radio[pane][selected=true]
+{
+	background-color: var(--light);
+	color: var(--dark);
+}

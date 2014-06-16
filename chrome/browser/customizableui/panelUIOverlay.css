@@ -1,0 +1,517 @@
+.panel-subviews
+{
+	background-color: var(--popup-light);
+	-moz-margin-start: 48px;
+	overflow: visible;
+}
+
+/* back icon for subviews */
+
+.panel-viewstack[viewtype=subview]::before
+{
+	content: "";
+	display: -moz-box;
+	background-image: url(chrome://browser/skin/SVGs/back.svg);
+	background-position: 18px 6px;
+	background-repeat: no-repeat;
+	filter: var(--fill-popup-dark);
+	pointer-events: none;
+	-moz-box-ordinal-group: 999;
+}
+
+.panel-viewstack[viewtype=subview] .panel-clickcapturer
+{
+	background-color: var(--popup-light);
+}
+
+.panel-viewstack[viewtype="main"] > .panel-subviews
+{
+	transform: translateX(22.35em);
+}
+
+.panel-viewstack[viewtype="main"] > .panel-subviews:-moz-locale-dir(rtl)
+{
+	transform: translateX(-22.35em);
+}
+
+.panel-viewstack:not([viewtype="main"]) > .panel-mainview > #PanelUI-mainView
+{
+	-moz-box-flex: 1;
+}
+
+.panel-subview-header,
+.panel-subview-footer
+{
+	padding: 12px;
+}
+
+.panel-subview-footer:hover
+{
+	background-color: var(--popup-dark-highlight);
+	box-shadow: none;
+}
+
+.panel-subview-footer:hover:active
+{
+	padding: 12px;
+	background-color: var(--popup-dark);
+	color: var(--popup-light);
+}
+
+.subviewbutton > .menu-accel-container
+{
+	-moz-box-pack: start;
+	-moz-margin-start: 10px;
+	-moz-margin-end: auto;
+	color: hsl(0,0%,50%);
+}
+
+.subviewbutton .toolbarbutton-text
+{
+	text-align: start;
+}
+
+.panel-subview-header
+{
+	margin: -8px 0 7px;
+	box-shadow: 0 15px 0 -14px var(--popup-dark-highlight-strong);
+	pointer-events: none;
+	font-size: 1.3em;
+	font-family: var(--font-segoesemilight);
+}
+
+.panel-subview-footer
+{
+	margin: 7px -4px -4px;
+	box-shadow: 0 -15px 0 -14px var(--popup-dark-highlight-strong);
+}
+
+.cui-widget-panelview .panel-subview-header
+{
+	display: none;
+}
+
+.cui-widget-panelview .subviewbutton.panel-subview-footer
+{
+	margin: 7px 0 0;
+}
+
+#PanelUI-mainView
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#app-extension-point-end > #PanelUI-menu-button
+{
+	padding: 2px 5px;
+}
+
+#app-extension-point-end > #PanelUI-menu-button .toolbarbutton-text
+{
+	display: none;
+}
+
+#app-extension-point-end > #PanelUI-menu-button .toolbarbutton-icon
+{
+	margin: 0;
+}
+
+#PanelUI-popup > arrowscrollbox > autorepeatbutton
+{
+	display: none;
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) .panel-arrowcontent
+{
+	padding: 0;
+}
+
+#wrapper-edit-controls:-moz-any([place="palette"],[place="panel"]) > #edit-controls,
+#wrapper-zoom-controls:-moz-any([place="palette"],[place="panel"]) > #zoom-controls
+{
+	-moz-margin-start: 0;
+}
+
+#PanelUI-contents,
+.panel-mainview:not([panelid="PanelUI-popup"])
+{
+	max-width: 22.35em;
+}
+
+#customization-panelHolder,
+#PanelUI-Popup .panel-arrowcontent
+{
+	padding: 4px 0;
+}
+
+#PanelUI-contents
+{
+	padding: 0;
+	max-width: 24.77em;
+	overflow: hidden;
+}
+
+#PanelUI-contents-scroller
+{
+	width: 24.77em !important;
+}
+
+toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton
+{
+	-moz-box-flex: 1;
+}
+
+#zoom-in-button > .toolbarbutton-text,
+#zoom-out-button > .toolbarbutton-text,
+#zoom-reset-button > .toolbarbutton-icon
+{
+	display: none;
+}
+
+#PanelUI-footer
+{
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+
+/* fake separator */
+#PanelUI-footer::before
+{
+	content: "";
+	display: -moz-box;
+	height: 1px;
+	-moz-box-flex: 1;
+	margin: 6px 14px;
+	background-color: var(--popup-dark-highlight);
+}
+
+#PanelUI-footer-inner
+{
+	display: flex;
+	/* fake separator */
+	box-shadow: 0 -15px 0 -14px var(--popup-dark-highlight);
+	padding-top: 6px;
+	margin-top: 6px;
+}
+
+#PanelUI-footer toolbarbutton
+{
+	min-width: 32px;
+	border: 0;
+}
+
+#PanelUI-footer-inner > toolbarseparator
+{
+	border: 0;
+	border-left: 1px solid var(--dark-highlight);
+	margin: 7px 0 7px;
+	display: none;
+}
+
+#PanelUI-footer-inner:hover > toolbarseparator
+{
+	margin: 0;
+}
+
+#PanelUI-help,
+#PanelUI-fxa-status,
+#PanelUI-customize,
+#PanelUI-quit
+{
+	margin: 0;
+	padding: 6px;
+	min-height: 2em;
+	-moz-box-orient: horizontal;
+	background-clip: padding-box;
+	min-width: 38px;
+}
+
+#PanelUI-fxa-status > .toolbarbutton-text
+{
+	width: 0; /* Fancy cropping solution for flexbox. */
+}
+
+#PanelUI-fxa-status[signedin]
+{
+	font-weight: bold;
+}
+
+#PanelUI-fxa-status > .toolbarbutton-text,
+#PanelUI-customize > .toolbarbutton-text
+{
+	margin: 0;
+	padding: 0 6px;
+	text-align: start;
+}
+
+#PanelUI-help > .toolbarbutton-text,
+#PanelUI-quit > .toolbarbutton-text
+{
+	display: none;
+}
+
+#PanelUI-fxa-status > .toolbarbutton-icon,
+#PanelUI-customize > .toolbarbutton-icon,
+#PanelUI-help > .toolbarbutton-icon,
+#PanelUI-quit > .toolbarbutton-icon
+{
+	-moz-margin-end: 0;
+}
+
+#PanelUI-fxa-status,
+#PanelUI-customize
+{
+	flex: 1;
+	list-style-image: url(chrome://browser/skin/SVGs/panel-customise.svg);
+}
+
+#customization-panelHolder #PanelUI-customize
+{
+	list-style-image: url(chrome://browser/skin/SVGs/panel-customiseFinish.svg);
+}
+
+#PanelUI-help
+{
+	list-style-image: url(chrome://browser/skin/SVGs/help.svg);
+}
+
+#PanelUI-quit
+{
+	list-style-image: url(chrome://browser/skin/SVGs/panel-exit.svg);
+}
+
+#PanelUI-fxa-status
+{
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+#PanelUI-help[disabled],
+#PanelUI-quit[disabled]
+{
+	opacity: 0.4;
+}
+
+#PanelUI-quit:not([disabled]):hover
+{
+	background-color: #d94141;
+}
+
+#PanelUI-quit:not([disabled]):hover .toolbarbutton-icon
+{
+	filter: var(--fill-popup-light);
+}
+
+#PanelUI-quit:not([disabled]):hover:active
+{
+	background-color: #ad3434;
+}
+
+#customization-container
+{
+	background-color: var(--dark-base);
+	padding: 8px;
+}
+
+#customization-header
+{
+	font-size: 2em;
+	font-family: var(--font-segoelight);
+	margin-bottom: 24px;
+}
+
+#customization-panelHolder #PanelUI-customize
+{
+	color: white;
+	background-color: rgb(116,191,67);
+}
+
+#customization-panelHolder #PanelUI-customize .toolbarbutton-icon
+{
+	filter: var(--fill-popup-light);
+}
+
+#customization-panelHolder #PanelUI-customize:hover
+{
+	background-color: rgb(105,173,61);
+}
+
+#customization-panelHolder #PanelUI-customize:hover:active
+{
+	background-color: var(--popup-dark);
+}
+
+#customization-palette .toolbarbutton-multiline-text,
+#customization-palette .toolbarbutton-text
+{
+	display: none;
+}
+
+toolbarpaletteitem > label
+{
+	text-align: center;
+}
+
+#PanelUI-contents toolbarpaletteitem
+{
+	-moz-box-flex: 1;
+	display: block;
+}
+
+.cui-widget-panel toolbarbutton
+{
+	min-width: 12.35em;
+}
+
+:-moz-any(.cui-widget-panel, #widget-overflow) .toolbarbutton-text
+{
+	text-align: start;
+	display: -moz-box;
+	margin: 1px 0 2px !important;
+	-moz-margin-start: 6px !important;
+	-moz-margin-end: 5px !important;
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) toolbarbutton:not([type=menu-button]),
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) .toolbarbutton-menubutton-dropmarker
+{
+	border: 0;
+	margin: 0;
+	padding: 8px !important;
+}
+
+#PanelUI-popup :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+#PanelUI-contents :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+.cui-widget-panel :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+#widget-overflow :-moz-any(.toolbarbutton-icon, .dropmarker-icon)
+{
+	max-height: 18px;
+	max-width: 18px;
+	filter: var(--fill-popup-dark);
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) toolbarbutton[type=menu-button]:not([buttonover]):not([open]):hover .toolbarbutton-menubutton-dropmarker,
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) toolbarbutton:not([type=menu-button]):not(:-moz-any(:hover:active, [open], [checked], [disabled=true])):hover
+{
+	background-color: var(--popup-dark-highlight);
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) toolbarbutton[type=menu-button][open] .toolbarbutton-menubutton-dropmarker,
+:-moz-any(#PanelUI-popup, #PanelUI-contents, .cui-widget-panel, #widget-overflow) toolbarbutton:not([type=menu-button]):not([disabled=true]):-moz-any(:hover:active, [checked], [open])
+{
+	background-color: var(--popup-dark);
+	color: var(--popup-light);
+}
+
+
+#PanelUI-popup toolbarbutton[type=menu-button][open] .dropmarker-icon,
+#PanelUI-contents toolbarbutton[type=menu-button][open] .dropmarker-icon,
+.cui-widget-panel toolbarbutton[type=menu-button][open] .dropmarker-icon,
+#widget-overflow toolbarbutton[type=menu-button][open] .dropmarker-icon,
+#PanelUI-popup toolbarbutton:not([type=menu-button]):not([disabled=true]):-moz-any(:hover:active, [checked], [open]) :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+#PanelUI-contents toolbarbutton:not([type=menu-button]):not([disabled=true]):-moz-any(:hover:active, [checked], [open]) :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+.cui-widget-panel toolbarbutton:not([type=menu-button]):not([disabled=true]):-moz-any(:hover:active, [checked], [open]) :-moz-any(.toolbarbutton-icon, .dropmarker-icon),
+#widget-overflow toolbarbutton:not([type=menu-button]):not([disabled=true]):-moz-any(:hover:active, [checked], [open]) :-moz-any(.toolbarbutton-icon, .dropmarker-icon)
+{
+	filter: var(--fill-popup-light);
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, #widget-overflow) textbox
+{
+	box-shadow: 0 0 0 2px var(--popup-dark-highlight);
+	margin: 0 6px;
+}
+
+:-moz-any(#PanelUI-popup, #PanelUI-contents, #widget-overflow) textbox[focused]
+{
+	box-shadow: 0 0 0 2px var(--popup-dark);
+	margin: 0 6px;
+}
+
+#PanelUI-historyItems > toolbarbutton
+{
+	list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
+}
+
+.restoreallitem.subviewbutton > .toolbarbutton-icon
+{
+	display: none;
+}
+
+#PanelUI-recentlyClosedWindows > toolbarbutton > .toolbarbutton-icon,
+#PanelUI-recentlyClosedTabs > toolbarbutton > .toolbarbutton-icon,
+#PanelUI-historyItems > toolbarbutton > .toolbarbutton-icon
+{
+	width: 16px;
+	height: 16px;
+}
+
+#PanelUI-footer > #PanelUI-footer-inner.panel-multiview-anchor,
+toolbarbutton.panel-multiview-anchor
+{
+	background-color: Highlight;
+	background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+}
+
+#PanelUI-footer > #PanelUI-footer-inner.panel-multiview-anchor,
+toolbarbutton.panel-multiview-anchor,
+toolbarbutton.panel-multiview-anchor > .toolbarbutton-menubutton-button
+{
+	color: HighlightText;
+}
+
+toolbarpaletteitem[place="palette"] > .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+#bookmarks-menu-button[cui-areatype="menu-panel"] > .toolbarbutton-menubutton-dropmarker
+{
+	display: none;
+}
+
+#search-container[cui-areatype="menu-panel"],
+#wrapper-search-container[place="panel"]
+{
+	width: 22.35em;
+}
+
+#search-container[cui-areatype="menu-panel"]
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+toolbarpaletteitem[place="palette"] > #search-container
+{
+	min-width: 7em;
+	width: 7em;
+}
+
+.panel-combined-button
+{
+	-moz-box-flex: 1;
+	min-width: calc(22.35em / 3 - 0.1px);
+	max-width: calc(22.35em / 3 - 0.1px);
+	-moz-box-orient: horizontal;
+}
+
+#zoom-controls[cui-areatype="toolbar"] > #zoom-reset-button > .toolbarbutton-text
+{
+	min-width: 7ch;
+}
+
+#BMB_bookmarksPopup > menuitem[checked="true"] > .menu-iconic-left
+{
+	display: none;
+}
+
+#PanelUI-contents #zoom-out-btn
+{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#PanelUI-contents #zoom-in-btn
+{
+	padding-left: 12px;
+	padding-right: 12px;
+}

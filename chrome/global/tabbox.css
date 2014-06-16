@@ -1,0 +1,44 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+.tabs-left,
+.tabs-right,
+.tab-bottom
+{
+	display: none;
+}
+
+tabpanels
+{
+	padding: 8px;
+}
+
+tab
+{
+	padding: 0 8px;
+	font-family: var(--font-segoesemilight);
+	font-size: 14pt;
+	font-weight: 500;
+	color: var(--text-light-40);
+}
+
+tab:hover
+{
+	color: var(--text-light-regular);
+}
+
+tab[selected]
+{
+	position: relative;
+	color: var(--chrome-base);
+}
+
+.tab-text
+{
+	margin: 0 !important;
+}
+
+tab:-moz-focusring
+{
+	outline: 1px dotted;
+	outline-offset: -1px;
+}

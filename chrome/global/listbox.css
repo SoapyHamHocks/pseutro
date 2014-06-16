@@ -1,0 +1,121 @@
+/* ===== listbox.css =======================================================
+  == Styles used by XUL listbox-related elements.
+  ======================================================================= */
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* ::::: listbox ::::: */
+
+listbox
+{
+	margin: 2px 4px;
+	border: 2px solid;
+	background-color: var(--light-highlight-80);
+	color: var(--dark);
+}
+
+listbox[disabled=true]
+{
+	color: var(--text-light-40);
+}
+
+/* ::::: listitem ::::: */
+
+listitem
+{
+	border: 1px solid transparent;
+}
+
+listitem[selected=true]
+{
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+/* ::::: listheader ::::: */
+
+listheader
+{
+	-moz-box-align: center;
+	-moz-box-pack: center;
+	background-color: var(--hsl-0-0-16);
+	background-size: 1px -moz-calc(100% - 6px);
+	background-position: 0 3px;
+	background-repeat: no-repeat;
+	background-clip: padding-box;
+	padding: 3px 8px;
+	color: var(--light);
+}
+
+treecol[sortable=true]:hover
+{
+	background-color: var(--hsl-0-0-22);
+}
+
+listheader[sortable=true]:hover:active
+{
+	background-color: var(--light);
+	color: var(--dark);
+}
+
+.listheader-icon
+{
+	-moz-margin-end: 2px;
+}
+
+.listheader-label
+{
+	margin: 0 !important;
+}
+
+/* ..... sort direction icon ..... */
+
+.listheader-sortdirection
+{
+	list-style-image: none;
+}
+
+.listheader-sortdirection[sortDirection=ascending]
+{
+	list-style-image: url(chrome://global/skin/tree/sort-asc.png);
+}
+
+.listheader-sortdirection[sortDirection=descending]
+{
+	list-style-image: url(chrome://global/skin/tree/sort-dsc.png);
+}
+
+/* ::::: listcell ::::: */
+
+.listcell-label
+{
+	margin: 0 !important;
+	padding-top: 0;
+	padding-bottom: 1px;
+	-moz-padding-start: 4px;
+	-moz-padding-end: 0;
+	white-space: nowrap;
+}
+
+.listcell-icon
+{
+	-moz-margin-end: 2px;
+}
+
+.listcell-label[disabled=true]
+{
+	color: GrayText;
+}
+
+/* ::::: listcell checkbox ::::: */
+
+.listcell-check
+{
+	-moz-appearance: checkbox;
+	-moz-box-align: center;
+	margin: 0px 2px;
+	border: 1px solid -moz-DialogText;
+	min-width: 13px;
+	min-height: 13px;
+	background: -moz-Field no-repeat 50% 50%;
+}

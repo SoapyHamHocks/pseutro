@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+		 xmlns:NC="http://home.netscape.com/NC-rdf#"
+		 xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<RDF:Description RDF:about="urn:mozilla:install-manifest"
+					 em:id="Pseutro@SoapySpew"
+					 em:name="Pseutro"
+					 em:version="1.1.0RC2"
+					 em:description="Yeah, it's kinda like Metro."
+					 em:creator="SpewBoy"
+					 em:developer="SoapyHamHocks"
+					 em:internalName="Pseutro"
+					 em:unpack="true"
+					 em:type="4">
+		<em:iconURL>chrome://browser/skin/SVGs/addon-icon.svg</em:iconURL>
+		<em:targetApplication RDF:resource="rdf:#$.Qzll"/>
+	</RDF:Description>
+	<RDF:Description RDF:about="rdf:#$.Qzll"
+					 em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+					 em:minVersion="29.0a1"
+					 em:maxVersion="32.0"/>
+</RDF:RDF>

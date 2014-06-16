@@ -1,0 +1,86 @@
+.searchbar-textbox
+{
+	width: 6em;
+	min-width: 6em;
+	-moz-margin-start: 6px;
+	-moz-margin-end: 0;
+}
+
+.searchbar-textbox
+
+.autocomplete-textbox-container
+{
+	-moz-box-align: stretch;
+}
+
+.textbox-input-box
+{
+	margin: 0;
+	-moz-margin-start: 3px;
+}
+
+/* ::::: buttons ::::: */
+
+.search-go-container,
+.searchbar-engine-button
+{
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	-moz-box-align: center;
+	background-color: transparent;
+}
+
+.search-go-container:hover,
+.searchbar-engine-button:hover
+{
+	background-color: var(--dark-highlight);
+}
+
+.search-go-container:hover:active,
+.searchbar-engine-button[open]
+{
+	background-color: var(--dark);
+}
+
+/* searchbar-engine-button */
+
+.searchbar-engine-image
+{
+	height: 16px;
+	width: 16px;
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+.searchbar-engine-button
+{
+	min-width: 0;
+}
+
+.searchbar-engine-button > .button-box
+{
+	-moz-appearance: none;
+	padding: 0;
+	border: 0;
+}
+
+.searchbar-engine-menuitem[selected=true] > .menu-iconic-text
+{
+	font-weight: bold;
+}
+
+/* search-go-button */
+
+.search-go-button
+{
+	list-style-image: url(chrome://global/skin/icons/dark/search-icons.png);
+	-moz-image-region: rect(0 18px 18px 0);
+	filter: var(--fill-dark-base);
+	padding: 3px;
+}
+
+.search-go-container:hover:active > .search-go-button
+{
+	filter: var(--fill-light-base);
+}

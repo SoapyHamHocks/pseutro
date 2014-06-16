@@ -1,0 +1,177 @@
+/*** Panel and outer controls ***/
+
+#downloadsPanel > .panel-arrowcontainer > .panel-arrowcontent
+{
+	padding: 0;
+}
+
+#downloadsListBox
+{
+	background-color: transparent;
+	color: inherit;
+}
+
+#downloadsPanel:not([hasdownloads]) > #downloadsListBox
+{
+	display: none;
+}
+
+#downloadsHistory
+{
+	background: transparent;
+	color: -moz-nativehyperlinktext;
+	cursor: pointer;
+}
+
+#downloadsPanel[keyfocus] > #downloadsFooter > #downloadsHistory:focus
+{
+	outline: 1px -moz-dialogtext dotted;
+	outline-offset: -1px;
+}
+
+#downloadsHistory > .button-box
+{
+	border: none;
+	margin: 1em;
+}
+
+#downloadsPanel[hasdownloads] > #downloadsFooter
+{
+	background-color: var(--popup-dark-highlight);
+}
+
+/*** Downloads Summary and List items ***/
+
+#downloadsSummary,
+richlistitem[type="download"]
+{
+	height: 7em;
+	color: inherit;
+}
+
+#downloadsSummary
+{
+	padding: 8px 38px 8px 12px;
+	cursor: pointer;
+	-moz-user-focus: normal;
+}
+
+#downloadsPanel[keyfocus] > #downloadsFooter > #downloadsSummary:focus
+{
+	outline: 1px -moz-dialogtext dotted;
+	outline-offset: -5px;
+}
+
+#downloadsSummary > .downloadTypeIcon
+{
+	list-style-image: url("chrome://browser/skin/downloads/download-summary.png");
+}
+
+#downloadsSummaryDescription
+{
+	color: -moz-nativehyperlinktext;
+}
+
+richlistitem[type=download]
+{
+	border-color: var(--popup-dark-highlight);
+}
+
+#downloadsPanel[keyfocus] > #downloadsListBox:focus > richlistitem[type="download"][selected]
+{
+	outline: 1px -moz-dialogtext dotted;
+	outline-offset: -1px;
+}
+
+.downloadTypeIcon
+{
+	-moz-margin-end: 8px;
+	/* Prevent flickering when changing states. */
+	min-height: 32px;
+	min-width: 32px;
+}
+
+.blockedIcon
+{
+	list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+#downloadsSummaryDetails,
+.downloadContainer
+{
+	font-size: 90%;
+}
+
+#downloadsSummaryDescription,
+.downloadTarget
+{
+	margin-bottom: 6px;
+	cursor: inherit;
+}
+
+.downloadTarget
+{
+	font-size: calc(100% / .9);
+}
+
+#downloadsSummaryDetails,
+.downloadDetails
+{
+	opacity: 0.6;
+	cursor: inherit;
+}
+
+.downloadButton
+{
+	background-color: transparent;
+	margin: 0 8px;
+	min-width: 0;
+	border-radius: 999px;
+	border: 2px solid var(--light-base);
+	width: 36px;
+	height: 36px;
+}
+
+.downloadButton .button-icon
+{
+	filter: var(--fill-popup-dark);
+	transform: translate(0);
+}
+
+.downloadButton:hover
+{
+	background-color: var(--popup-dark-highlight);
+}
+
+.downloadButton:hover:active
+{
+	background-color: var(--popup-dark);
+	color: var(--popup-light);
+}
+
+.downloadButton:hover:active .button-icon
+{
+	filter: var(--fill-popup-light);
+}
+
+#downloadsPanel[keyfocus] .downloadButton:focus > .button-box
+{
+	border: 1px dotted ThreeDDarkShadow;
+}
+
+/*** Button icons ***/
+
+.downloadButton.downloadCancel
+{
+	list-style-image: url(chrome://browser/skin/SVGs/stop.svg);
+}
+
+.downloadButton.downloadShow
+{
+	list-style-image: url(chrome://browser/skin/SVGs/open.svg);
+}
+
+.downloadButton.downloadRetry
+{
+	list-style-image: url(chrome://browser/skin/SVGs/reload.svg);
+}

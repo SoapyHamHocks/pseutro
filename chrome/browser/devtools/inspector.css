@@ -1,0 +1,27 @@
+#inspector-searchbox
+{
+	transition-property: max-width, -moz-padding-end, -moz-padding-start;
+	transition-duration: 250ms;
+	transition-timing-function: ease;
+}
+
+#inspector-searchbox:not([focused]):not([filled]) > .textbox-input-box
+{
+	overflow: hidden;
+}
+
+#inspector-searchbox:not([focused]):not([filled])
+{
+	max-width: 20px !important;
+}
+
+#inspector-searchbox[focused],
+#inspector-searchbox[filled]
+{
+	max-width: 200px !important;
+}
+
+#inspector-sidebar > tabpanels
+{
+	background-color: #FFF;
+}

@@ -1,0 +1,74 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+checkbox
+{
+	-moz-box-align: center;
+	margin: 2px 4px;
+	padding: 2px;
+}
+
+.checkbox-label-box
+{
+	-moz-margin-start: 3px;
+	border: 1px solid transparent;
+	padding: 0 1px;
+}
+
+.checkbox-icon
+{
+	-moz-margin-end: 3px;
+}
+
+.checkbox-label
+{
+	margin: 0 !important;
+}
+
+.checkbox-check
+{
+	-moz-box-align: center;
+	height: 12px;
+	width: 12px;
+	box-shadow: 0 0 0 2px var(--light-highlight-strong);
+	filter: var(--fill-light-base);
+	transform: translate(0);
+}
+
+checkbox:not([disabled]):hover > .checkbox-check
+{
+	box-shadow: 0 0 0 2px var(--light-highlight-43);
+}
+
+checkbox:not([disabled]):hover:active > .checkbox-check
+{
+	background-color: var(--light);
+	box-shadow: 0 0 0 2px var(--light);
+}
+
+checkbox[checked] .checkbox-check
+{
+	background-image: url(chrome://browser/skin/SVGs/check.svg);
+	background-size: 12px 12px;
+}
+
+checkbox[disabled] .checkbox-check
+{
+	background-color: var(--light-highlight-08);
+	box-shadow: 0 0 0 2px var(--light-highlight-15);
+}
+
+checkbox[disabled] .checkbox-label-box
+{
+	opacity: .4;
+}
+
+checkbox[checked][disabled] .checkbox-check
+{
+	background-position: -24px 0;
+}
+
+checkbox[checked]:not([disabled]):hover:active .checkbox-check
+{
+	background-color: transparent;
+	background-position: -12px 0;
+}

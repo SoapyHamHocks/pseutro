@@ -1,0 +1,215 @@
+/* Sidebars */
+.sidebar-placesTree
+{
+	border: 0;
+	margin: 0;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(leaf),
+.sidebar-placesTreechildren::-moz-tree-image(leaf)
+{
+	cursor: pointer;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(leaf, hover)
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell(separator)
+{
+	cursor: default;
+}
+
+/* Trees */
+treechildren::-moz-tree-image(title)
+{
+	list-style-image: url(chrome://mozapps/skin/places/defaultFavicon.png);
+	padding-right: 2px;
+	margin: 0 2px;
+	width: 16px;
+	height: 16px;
+}
+
+treechildren::-moz-tree-image(title, livemarkItem)
+{
+	list-style-image: url(chrome://browser/skin/places/livemark-item.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(title, livemarkItem, visited)
+{
+	-moz-image-region: rect(0 32px 16px 16px);
+}
+
+treechildren::-moz-tree-image(title, separator)
+{
+	list-style-image: none;
+	width: 0;
+	height: 0;
+}
+
+treechildren::-moz-tree-image(title, container)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(0 32px 16px 16px);
+}
+
+treechildren::-moz-tree-image(title, container, selected, focused)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item-inverted.png);
+}
+
+treechildren::-moz-tree-image(title open)
+{
+	-moz-image-region: rect(16px 32px 32px 16px);
+}
+
+treechildren::-moz-tree-image(title, container, livemark)
+{
+	list-style-image: url(chrome://global/skin/dark/folder-item.png);
+	-moz-image-region: rect(0 48px 16px 32px);
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/allBookmarks.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/bookmarksToolbar.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/bookmarksMenu.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/unsortedBookmarks.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+/* query-nodes should be styled even if they're not expandable */
+treechildren::-moz-tree-image(title, query)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(0 64px 16px 48px);
+}
+
+treechildren::-moz-tree-image(title, query, selected, focus)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item-inverted.png);
+}
+
+treechildren::-moz-tree-image(title, query, tagContainer),
+treechildren::-moz-tree-image(query, OrganizerQuery_Tags)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/tag.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(query, OrganizerQuery_Downloads)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/downloads.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+/* calendar icon for folders grouping items by date */
+treechildren::-moz-tree-image(title, query, dayContainer)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/calendar.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, selected, focus)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item-inverted.png);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, open)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-image(title, query, hostContainer, open, selected, focus)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item-inverted.png);
+}
+
+treechildren::-moz-tree-image(title, query, OrganizerQuery_History)
+{
+	list-style-image: url(chrome://browser/skin/places/dark/history.png);
+	-moz-image-region: rect(0 16px 16px 0);
+}
+
+/* We want some queries to look like ordinary folders. This must come
+   after the (title, query) selector, or it would get overridden. */
+treechildren::-moz-tree-image(title query folder)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item.png);
+	-moz-image-region: rect(0 32px 16px 16px);
+}
+
+treechildren::-moz-tree-image(title query folder open)
+{
+	-moz-image-region: rect(16px 32px 32px 16px);
+}
+
+treechildren::-moz-tree-image(title query folder, selected, focus)
+{
+	list-style-image: url(chrome://global/skin/icons/dark/folder-item-inverted.png);
+}
+
+/* selected */
+
+treechildren::-moz-tree-image(container, OrganizerQuery_AllBookmarks, selected, focus),
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar, selected, focus),
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu, selected, focus),
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks, selected, focus),
+treechildren::-moz-tree-image(title, query, tagContainer, selected, focus),
+treechildren::-moz-tree-image(query, OrganizerQuery_Tags, selected, focus),
+treechildren::-moz-tree-image(query, OrganizerQuery_Downloads, selected, focus),
+treechildren::-moz-tree-image(title, query, dayContainer, selected, focus),
+treechildren::-moz-tree-image(title, query, OrganizerQuery_History, selected, focus)
+{
+	-moz-image-region: rect(0 32px 16px 16px);
+}
+
+treechildren::-moz-tree-image(cutting)
+{
+	opacity: .5;
+}
+
+treechildren::-moz-tree-cell-text(cutting)
+{
+	opacity: .7;
+}
+
+/* Browser Sidebars */
+
+#viewButton
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#viewButton > .button-box > .button-menu-dropmarker
+{
+	height: auto;
+	width: auto;
+	-moz-margin-end: -3px;
+}

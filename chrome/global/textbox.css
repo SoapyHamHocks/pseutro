@@ -1,0 +1,136 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+
+/* ::::: textbox ::::: */
+
+textbox
+{
+	cursor: text;
+	margin: 6px 4px;
+	padding: 0;
+	-moz-padding-start: 6px;
+	border: 0;
+	background-color: var(--textbox-normal);
+	background-clip: padding-box;
+	color: var(--dark);
+	min-height: 24px;
+}
+
+textbox[focused]
+{
+	background-color: var(--textbox-focused);
+}
+
+html|*.textbox-input,
+html|*.textbox-textarea
+{
+	margin: 0 !important;
+	border: 0 !important;
+	padding: 0 0 1px !important;
+	background-color: inherit;
+	color: inherit;
+	font: inherit;
+	font-weight: 400;
+	font-size: 13px;
+	font-family: var(--font-segoe);
+}
+
+html|*.textbox-input:-moz-placeholder,
+html|*.textbox-textarea:-moz-placeholder
+{
+	color: var(--text-light-regular);
+}
+
+.textbox-contextmenu
+{
+	cursor: default;
+}
+
+/* ..... readonly state ..... */
+
+textbox[readonly=true]
+{
+	background-color: transparent;
+	box-shadow: 0 0 0 2px var(--textbox-disabled) inset;
+	color: var(--text-light-40);
+}
+
+/* ..... disabled state ..... */
+
+textbox[disabled=true]
+{
+	cursor: default;
+	background-color: transparent;
+	box-shadow: 0 0 0 2px var(--textbox-disabled) inset;
+	color: var(--text-light-22);
+}
+
+/* ::::: plain textbox ::::: */
+
+textbox.plain
+{
+	background-color: transparent;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: 0 !important;
+	box-shadow: none !important;
+}
+
+/* ::::: search textbox ::::: */
+
+.textbox-search-icon
+{
+	list-style-image: url(chrome://global/skin/icons/dark/search-icons.png);
+	-moz-image-region: rect(0 18px 18px 0);
+	padding: 3px;
+}
+
+.textbox-search-icon:-moz-locale-dir(rtl)
+{
+	transform: scaleX(-1);
+}
+
+.textbox-search-icon[searchbutton]:not([disabled=true])
+{
+	cursor: pointer;
+}
+
+.textbox-search-clear
+{
+	list-style-image: url(chrome://global/skin/icons/dark/search-icons.png);
+	-moz-image-region: rect(0 36px 18px 18px);
+	padding: 3px;
+}
+
+.textbox-search-clear:not([disabled=true])
+{
+	cursor: default;
+}
+
+.textbox-search-clear:not([disabled=true]):hover,
+.textbox-search-icon[searchbutton]:not([disabled=true]):hover
+{
+	background-color: var(--dark-highlight);
+}
+
+.textbox-search-clear:not([disabled=true]):hover:active,
+.textbox-search-icon[searchbutton]:not([disabled=true]):hover:active
+{
+	list-style-image: url(chrome://global/skin/icons/dark/search-icons-inverted.png);
+	background-color: var(--dark);
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > .textbox-input-box > html|*.textbox-input
+{
+	visibility: hidden;
+}
+
+@media (-moz-windows-default-theme)
+{
+	textbox html|*.textbox-input:-moz-placeholder
+	{
+		font-style: italic;
+	}
+}

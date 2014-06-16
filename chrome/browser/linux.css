@@ -1,0 +1,21 @@
+#TabsToolbar
+{
+	-moz-appearance: menubar !important;
+}
+
+.tabbrowser-tab:not([selected])
+{
+	color: -moz-menubartext !important;
+}
+
+#toolbar-menubar
+{
+	-moz-appearance: menubar !important;
+	margin: 0 !important;
+	padding: 4px 0 !important;
+}
+
+#main-menubar menu
+{
+	color: -moz-menubartext !important;
+}

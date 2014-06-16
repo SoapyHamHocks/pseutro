@@ -1,0 +1,18 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* ::::: progressmeter ::::: */
+
+progressmeter
+{
+	margin: 2px 4px;
+	border: 0;
+	background: var(--progress-background);
+	min-width: 128px;
+	min-height: 6px;
+}
+
+.progress-bar
+{
+	min-width: 0;
+	background-color: var(--chrome-base);
+}

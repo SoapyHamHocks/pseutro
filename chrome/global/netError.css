@@ -1,0 +1,165 @@
+/*
+ * This defines the look-and-feel styling of the error pages.
+ * (see: netError.xhtml)
+ */
+
+@import url(chrome://global/skin/);
+
+body
+{
+	margin: 0;
+	padding: 0 1em;
+}
+
+h1
+{
+	margin: 0 0 .6em 0;
+}
+
+ul,
+ol
+{
+	margin: 0;
+	-moz-margin-start: 1.5em;
+	padding: 0;
+}
+
+ul > li,
+ol > li
+{
+	margin-bottom: .5em;
+}
+
+ul
+{
+	list-style: square;
+}
+
+#errorPageContainer
+{
+	position: relative;
+	min-width: 13em;
+	max-width: 52em;
+	margin: 4em auto;
+	padding: 3em;
+	-moz-padding-start: 30px;
+}
+
+#errorPageContainer.certerror
+{
+	background-image: url(chrome://global/skin/icons/sslWarning.png);
+}
+
+#errorPageContainer:-moz-dir(rtl)
+{
+	background-position: right 0;
+}
+
+#errorTitle
+{
+	-moz-margin-start: 80px;
+}
+
+#errorLongContent
+{
+	-moz-margin-start: 80px;
+}
+
+#errorShortDesc > p
+{
+	overflow: auto;
+	padding-bottom: 1em;
+	white-space: pre-wrap;
+}
+
+#errorLongDesc
+{
+	-moz-padding-end: 3em;
+	color: var(--text-light-70);
+}
+
+#errorTryAgain
+{
+	margin-top: 2em;
+	-moz-margin-start: 80px;
+}
+
+#brand
+{
+	position: absolute;
+	right: 0;
+	bottom: -1.5em;
+	-moz-margin-end: 10px;
+	opacity: .4;
+}
+
+#brand:-moz-dir(rtl)
+{
+	right: auto;
+	left: 0;
+}
+
+#brand > p
+{
+	margin: 0;
+}
+
+#errorContainer
+{
+	display: none;
+}
+
+#securityOverrideDiv
+{
+	padding-top: 10px;
+}
+
+#securityOverrideContent
+{
+	background-color: InfoBackground;
+	color: InfoText;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+/* Custom styling for 'blacklist' error class */
+:root.blacklist #errorTitle, :root.blacklist #errorLongContent,
+:root.blacklist #errorShortDesc, :root.blacklist #errorLongDesc,
+:root.blacklist a
+{
+	background-color: #722; /* Dark red */
+	color: #FFF;
+}
+
+:root.blacklist #errorPageContainer
+{
+	background-image: url(chrome://global/skin/icons/blacklist_large.png);
+	background-color: #722;
+}
+
+:root.blacklist #errorTryAgain
+{
+	display: none;
+}
+
+/* stolen from button.css */
+
+button
+{
+	min-width: 6.3em;
+	background-color: var(--button-normal);
+	border: 0;
+	padding: 3px 4px;
+	color: var(--text-light-regular);
+}
+
+button:not([disabled]):hover
+{
+	background-color: var(--button-hover);
+}
+
+button:not([disabled]):-moz-any(:hover:active, [open], [checked])
+{
+	background-color: var(--light);
+	color: var(--dark);
+}

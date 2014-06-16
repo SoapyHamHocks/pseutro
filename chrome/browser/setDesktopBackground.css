@@ -1,0 +1,17 @@
+#screen
+{
+	margin-bottom: 20px;
+}
+
+#monitor
+{
+	width: 240px;
+	height: 179px;
+	box-shadow: 0 0 0 2px var(--light-highlight);
+	margin-bottom: 20px;
+}
+
+#monitor[aspectratio="16:10"]
+{
+	width: 286px;
+}

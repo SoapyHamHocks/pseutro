@@ -1,0 +1,95 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/* Scroll arrows */
+
+autorepeatbutton,
+.scrollbutton-up,
+.scrollbutton-down
+{
+	list-style-image: url(chrome://browser/skin/SVGs/dropdown-arrow.svg);
+	-moz-image-region: auto;
+	padding: 10px 9px;
+}
+
+.scrollbutton-up > .toolbarbutton-icon,
+.scrollbutton-down > .toolbarbutton-icon
+{
+	filter: var(--fill-light-base);
+}
+
+autorepeatbutton > .autorepeatbutton-icon
+{
+	filter: var(--fill-popup-dark);
+}
+
+/* Vertical */
+
+.autorepeatbutton-up[orient=vertical] > .autorepeatbutton-icon,
+.scrollbutton-up[orient=vertical] > .toolbarbutton-icon
+{
+	transform: scaleY(-1) translate(0);
+}
+
+/* Horizontal */
+
+.autorepeatbutton-up[orient=horizontal] > .autorepeatbutton-icon,
+.autorepeatbutton-down[orient=horizontal] > .autorepeatbutton-icon:-moz-locale-dir(rtl),
+.scrollbutton-up[orient=horizontal] > .toolbarbutton-icon,
+.scrollbutton-down[orient=horizontal] > .toolbarbutton-icon:-moz-locale-dir(rtl)
+{
+	transform: rotate(90deg) translate(0);
+}
+
+.autorepeatbutton-up[orient=horizontal] > .autorepeatbutton-icon:-moz-locale-dir(rtl),
+.autorepeatbutton-down[orient=horizontal] > .autorepeatbutton-icon,
+.scrollbutton-up[orient=horizontal] > .toolbarbutton-icon:-moz-locale-dir(rtl),
+.scrollbutton-down[orient=horizontal] > .toolbarbutton-icon
+{
+	transform: rotate(-90deg) translate(0);
+}
+
+/* disabled */
+
+autorepeatbutton[disabled=true],
+.scrollbutton-up[disabled=true],
+.scrollbutton-down[disabled=true]
+{
+	opacity: .4;
+}
+
+.scrollbutton-up > .toolbarbutton-text,
+.scrollbutton-down > .toolbarbutton-text
+{
+	display: none;
+}
+
+.scrollbutton-up,
+.scrollbutton-down,
+autorepeatbutton
+{
+	-moz-box-align: center;
+	-moz-box-pack: center;
+}
+
+.scrollbutton-up:not([disabled]):hover,
+.scrollbutton-down:not([disabled]):hover
+{
+	background-color: var(--light-highlight);
+}
+
+autorepeatbutton:not([disabled]):hover
+{
+	background-color:var(--light-highlight);
+}
+
+.scrollbutton-up:not([disabled]):hover:active,
+.scrollbutton-down:not([disabled]):hover:active
+{
+	background-color: var(--light);
+}
+
+.scrollbutton-up:not([disabled]):hover:active > .toolbarbutton-icon,
+.scrollbutton-down:not([disabled]):hover:active > .toolbarbutton-icon
+{
+	filter: var(--fill-dark-base);
+}
