@@ -5,12 +5,6 @@
 	max-height: 36px;
 }
 
-#back-button,
-#forward-button
-{
-	list-style-image: url(chrome://browser/skin/toolbar-icons.png);
-}
-
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon
 {
@@ -25,12 +19,12 @@
 
 #back-button
 {
-	-moz-image-region: rect(0 18px 18px 0);
+	list-style-image: url(chrome://browser/skin/SVGs/back.svg);
 }
 
 #forward-button
 {
-	-moz-image-region: rect(0 36px 18px 18px);
+	list-style-image: url(chrome://browser/skin/SVGs/forward.svg);
 }
 
 #back-button:-moz-locale-dir(rtl) > .toolbarbutton-icon,
