@@ -1,8 +1,6 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
 resizer
 {
-	background-image: url(chrome://global/skin/icons/resizer.png);
+	background-image: url(chrome://browser/skin/SVGs/resizer.svg);
 	background-repeat: no-repeat;
 	background-position: 4px calc(100% - 4px);
 	cursor: se-resize;
@@ -13,7 +11,7 @@ resizer
 resizer[rtl=true],
 resizer[dir=bottomend]:-moz-locale-dir(rtl)
 {
-	background-image: url(chrome://global/skin/icons/resizer-rtl.png);
+	transform: scaleX(-1);
 }
 
 resizer[dir=left],
@@ -50,4 +48,9 @@ resizer[dir=topleft]
 resizer[dir=topright]
 {
 	cursor: ne-resize;
+}
+
+textarea resizer
+{
+	filter: var(--fill-dark-base);
 }
