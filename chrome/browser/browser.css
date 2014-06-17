@@ -105,6 +105,7 @@ panelview:not([mainview]):not([current])
 #titlebar-buttonbox
 {
 	-moz-appearance: -moz-window-button-box;
+	-moz-margin-start: 4px;
 }
 
 #main-window[sizemode=maximized] #titlebar-buttonbox
