@@ -313,8 +313,7 @@ label[disabled=true]
 	transform: rotate(90deg);
 }
 
-::-moz-selection,
-::selection
+::-moz-selection
 {
 	background-color: var(--chrome-base) !important;
 }

@@ -7,6 +7,10 @@ resizer
 	background-position: 4px calc(100% - 4px);
 	cursor: se-resize;
 	width: 15px;
+}
+
+window resizer
+{
 	filter: var(--fill-light-base);
 }
 

@@ -703,11 +703,11 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 
 /* ::::: Location Bar ::::: */
 
-#urlbar html|*.textbox-input,
-#searchbar html|*.textbox-input
+/*#urlbar .textbox-input,
+#searchbar .textbox-input
 {
 	font-size: 15px;
-}
+}*/
 
 #urlbar
 {
@@ -3365,7 +3365,7 @@ line.box-model-guide-left {
   background-color: #232e38;
 }
 
-.gclitoolbar-input-node > .textbox-input-box > html|*.textbox-input::-moz-selection {
+.gclitoolbar-input-node > .textbox-input-box > .textbox-input::-moz-selection {
   background-color: hsl(210,30%,85%);
   color: hsl(210,24%,16%);
   text-shadow: none;

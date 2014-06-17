@@ -172,7 +172,7 @@ treecolpicker
 treecol:not(:first-of-type),
 treecolpicker:not(:first-of-type)
 {
-	background-image: linear-gradient(var(--light-highlight), var(--light-highlight)));
+	background-image: linear-gradient(var(--light-highlight), var(--light-highlight));
 }
 
 treecol[hideheader=true]

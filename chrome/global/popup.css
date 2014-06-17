@@ -10,7 +10,7 @@ panel
 	border: 2px solid var(--popup-dark);
 	padding: 0;
 	min-width: 1px;
-	transition-duration: 0 !important;
+	transition-duration: 0s !important;
 }
 
 menupopup > menu > menupopup
