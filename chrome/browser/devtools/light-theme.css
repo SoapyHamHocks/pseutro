@@ -865,7 +865,7 @@ div.CodeMirror span.eval-text {
   background-color: hsla(206,37%,4%,.4);
 }
 
-.command-button > image {
+.command-button > .toolbarbutton-icon {
   -moz-appearance: none;
   width: 16px;
   height: 16px;
@@ -873,71 +873,71 @@ div.CodeMirror span.eval-text {
   background-position: 0 center;
   background-repeat: no-repeat;
 }
-.command-button:hover > image {
+.command-button:hover > .toolbarbutton-icon {
   background-position: -16px center;
 }
-.command-button:hover:active > image {
+.command-button:hover:active > .toolbarbutton-icon {
   background-position: -32px center;
 }
-.command-button[checked=true] > image {
+.command-button[checked=true] > .toolbarbutton-icon {
   background-position: -48px center;
 }
 
-#command-button-paintflashing > image {
+#command-button-paintflashing > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-paintflashing.png");
 }
 
-#command-button-responsive > image {
+#command-button-responsive > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-responsivemode.png");
 }
 
-#command-button-tilt > image {
+#command-button-tilt > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-tilt.png");
 }
 
-#command-button-scratchpad > image {
+#command-button-scratchpad > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-scratchpad.png");
   background-size: 48px 16px;
 }
 
-#command-button-pick > image {
+#command-button-pick > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-pick.png");
 }
 
-#command-button-splitconsole > image {
+#command-button-splitconsole > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-console.png");
 }
 
-#command-button-eyedropper > image {
+#command-button-eyedropper > .toolbarbutton-icon {
   background-image: url("chrome://browser/skin/devtools/command-eyedropper.png");
 }
 
 @media (min-resolution: 2dppx) {
-  #command-button-paintflashing > image {
+  #command-button-paintflashing > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-paintflashing@2x.png");
   }
 
-  #command-button-responsive > image {
+  #command-button-responsive > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-responsivemode@2x.png");
   }
 
-  #command-button-tilt > image {
+  #command-button-tilt > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-tilt@2x.png");
   }
 
-  #command-button-scratchpad > image {
+  #command-button-scratchpad > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-scratchpad@2x.png");
   }
 
-  #command-button-pick > image {
+  #command-button-pick > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-pick@2x.png");
   }
 
-  #command-button-splitconsole > image {
+  #command-button-splitconsole > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-console@2x.png");
   }
 
-  #command-button-eyedropper > image {
+  #command-button-eyedropper > .toolbarbutton-icon {
     background-image: url("chrome://browser/skin/devtools/command-eyedropper@2x.png");
   }
 }
@@ -1142,7 +1142,8 @@ div.CodeMirror span.eval-text {
   border-color: transparent;
 }
 
-.theme-light checkbox {
+.theme-light checkbox,
+.theme-light radio:not(.devtools-tab) {
 	filter: var(--fill-popup-dark);
 }
 
