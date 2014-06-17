@@ -1,5 +1,4 @@
 @import url(chrome://global/skin/inContentUI.css);
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 #addons-page
 {
@@ -723,7 +722,7 @@ setting[type="radio"] > radiogroup
 #addons-page .radio-check-box1,
 #addons-page .checkbox-check
 {
-	filter: var(--popup-dark-fill);
+	filter: var(--fill-popup-dark);
 }
 
 menulist
