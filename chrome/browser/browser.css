@@ -247,9 +247,9 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 		color: #282828;
 	}
 	
-	#TabsToolbar .toolbarbutton-1:not([type=menu-button]):not([disabled=true]):hover,
+	#TabsToolbar .toolbarbutton-1:not([type=menu-button]):not([disabled=true]):not([open]):not(:active):hover,
 	#TabsToolbar .toolbarbutton-1[buttonover] > .toolbarbutton-menubutton-button,
-	#TabsToolbar .toolbarbutton-1:not([buttonover]):hover > .toolbarbutton-menubutton-dropmarker,
+	#TabsToolbar .toolbarbutton-1:not([buttonover]):not([open]):hover > .toolbarbutton-menubutton-dropmarker,
 	.tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled=true]):hover,
 	.tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled=true]):hover,
 	.tabbrowser-tab,
