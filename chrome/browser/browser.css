@@ -364,7 +364,7 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 }
 
 /* third party icons */
-.toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #stop-button, #reload-button, #home-button, #downloads-button, #downloads-indicator, #history-panelmenu, #bookmarks-menu-button, #print-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #menu_tabview, #tabview-button, #appmenu-toolbar-button, #PanelUI-menu-button, #alltabs-button, #privatebrowsing-button, #privateTab-toolbar-openNewPrivateTab, #developer-button, #characterencoding-button, #email-link-button, #switch-to-metro-button, #add-ons-button, #preferences-button, #find-button, #save-page-button, #open-file-button, #nav-bar-overflow-button, #sidebar-button)) .toolbarbutton-icon
+.toolbarbutton-1:not(:-moz-any(#back-button, #forward-button, #stop-button, #reload-button, #home-button, #downloads-button, #downloads-indicator, #history-panelmenu, #bookmarks-menu-button, #print-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-out-button, #zoom-in-button, #sync-button, #feed-button, #menu_tabview, #tabview-button, #appmenu-toolbar-button, #PanelUI-menu-button, #alltabs-button, #privatebrowsing-button, #privateTab-toolbar-openNewPrivateTab, #developer-button, #characterencoding-button, #email-link-button, #switch-to-metro-button, #add-ons-button, #preferences-button, #find-button, #save-page-button, #open-file-button, #nav-bar-overflow-button, #sidebar-button, #social-share-button)) .toolbarbutton-icon
 {
 	filter: none !important;
 }
@@ -667,6 +667,11 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 #sidebar-button
 {
 	list-style-image: url(SVGs/sidebar.svg);
+}
+
+#social-share-button
+{
+	list-style-image: url(SVGs/share.svg);
 }
 
 /* all tabs button */
