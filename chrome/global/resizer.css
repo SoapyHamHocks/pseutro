@@ -1,3 +1,5 @@
+@import url(chrome://global/skin/vars.css);
+
 resizer
 {
 	background-image: url(chrome://browser/skin/SVGs/resizer.svg);
@@ -50,7 +52,17 @@ resizer[dir=topright]
 	cursor: ne-resize;
 }
 
-textarea resizer
+html resizer
 {
-	filter: var(--fill-dark-base);
+	background-color: hsl(0, 0%, 99.5%);
+	border: 1px solid rgba(0, 0, 0, .04);
+	border-bottom-width: 0;
+	border-right-width: 0;
+}
+
+html resizer[dir=bottomleft],
+html resizer[dir=bottomstart]
+{
+	border: 1px solid rgba(0, 0, 0, .04);
+	border-left-width: 0;
 }
