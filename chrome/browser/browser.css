@@ -2395,8 +2395,8 @@ toolbar[mode=full] > #downloads-button > .toolbarbutton-text
 	display: -moz-stack !important;
 }
 
-.progress-bar,
-.progress-remainder
+#downloads-indicator-progress > .progress-bar,
+#downloads-indicator-progress > .progress-remainder
 {
 	display: none;
 }
