@@ -1,3 +1,37 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* vim:set ts=2 sw=2 sts=2 et: */
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Sources and breakpoints pane */
+
+#sources-pane[selectedIndex="0"] + #sources-and-editor-splitter {
+  border-color: transparent;
+}
+
+#sources-pane > tabs {
+  -moz-border-end: 1px solid;
+}
+
+#sources-pane .devtools-toolbar {
+  border: none; /* Remove the devtools-toolbar bottom border. */
+  -moz-border-end: 1px solid;
+}
+
+.theme-dark #sources-pane > tabs,
+.theme-dark #sources-pane .devtools-toolbar {
+  -moz-border-end-color: black; /* Match the splitter color. */
+}
+
+.theme-light #sources-pane > tabs,
+.theme-light #sources-pane .devtools-toolbar {
+  -moz-border-end-color: #aaa; /* Match the splitter color. */
+}
+
 /* Sources and breakpoints list */
 
 .dbg-source-item {
@@ -510,6 +544,11 @@
 
 /* Toolbar controls */
 
+.devtools-sidebar-tabs > tabs > tab {
+  min-height: 1em !important;
+  padding: 0 !important;
+}
+
 #resume {
   list-style-image: url(debugger-pause.png);
   -moz-image-region: rect(0px,16px,16px,0px);
@@ -563,4 +602,39 @@
 #vertical-layout-panes-container {
   min-height: 35vh;
   max-height: 80vh;
+}
+
+#body[layout=vertical] #sources-pane > tabs {
+  -moz-border-end: none;
+}
+
+#body[layout=vertical] #instruments-pane {
+  margin: 0 !important;
+  /* To prevent all the margin hacks to hide the sidebar. */
+}
+
+#body[layout=vertical] .side-menu-widget-container,
+#body[layout=vertical] .side-menu-widget-empty-text {
+  box-shadow: none !important;
+}
+
+#body[layout=vertical] .side-menu-widget-item-arrow {
+  background-image: none !important;
+}
+
+#body[layout=vertical] .side-menu-widget-group,
+#body[layout=vertical] .side-menu-widget-item {
+  -moz-margin-end: 0;
+}
+
+.devtools-sidebar-tabs > tabs > tab {
+  min-height: 22px !important;
+}
+
+#instruments-pane-toggle:hover {
+  -moz-image-region: rect(0px,32px,16px,16px);
+}
+
+#instruments-pane-toggle:hover:active {
+  -moz-image-region: rect(0px,48px,16px,32px);
 }
