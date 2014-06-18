@@ -13,6 +13,13 @@ panel
 	transition-duration: 0s !important;
 }
 
+#theme-test-panel-theme
+{
+	background-color: var(--dark-base);
+	color: inherit;
+	border: 0;
+}
+
 menupopup > menu > menupopup
 {
 	/* align submenus */

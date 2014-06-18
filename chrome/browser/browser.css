@@ -3409,3 +3409,9 @@ line.box-model-guide-left {
 .gcli-in-closebrace {
   color: hsl(0,0%,80%);
 }
+
+/* fix for theme test panel */
+.theme-test-content
+{
+	-moz-appearance: none !important;
+}

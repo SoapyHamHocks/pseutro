@@ -42,7 +42,7 @@ button[default]:not([disabled=true]):hover
 	background-color: var(--chrome-light);
 }
 
-button:not([disabled=true]):not([buttondown]):-moz-any(:hover:active, [open], [checked])
+button:not([disabled=true]):-moz-any(:hover:active, [open], [checked]):not([type=menu-button])
 {
 	background-color: var(--light);
 	color: var(--dark);
@@ -77,41 +77,42 @@ button[type=menu-button]
 
 .button-menubutton-dropmarker > .dropmarker-icon
 {
-	filter: var(--fill-dark-base);
+	filter: var(--fill-light-base);
 }
 
 button:not([buttonover]):hover > .button-menubutton-dropmarker
 {
-	background-color: var(--light-highlight);
+	background-color: var(--button-hover);
 }
 
-button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker
+button:not([buttondown]):-moz-any(:hover:active, [open]) > .button-menubutton-dropmarker
 {
 	background-color: var(--light);
 }
 
-button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker > .dropmarker-icon
+button:-moz-any(:hover:active, [open]) > .button-box > .button-menu-dropmarker > .dropmarker-icon,
+button:not([buttondown]):-moz-any(:hover:active, [open]) > .button-menubutton-dropmarker > .dropmarker-icon
 {
-	filter: var(--fill-light-base);
+	filter: var(--fill-dark-base);
 }
 
 /* panel / tabprompt buttons */
 
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button,
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) .button-menubutton-dropmarker
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button,
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) .button-menubutton-dropmarker
 {
 	background-color: var(--popup-button-normal);
 	color: var(--popup-dark);
 }
 
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):hover,
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttonover]):hover > .button-menubutton-dropmarker
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):hover,
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttonover]):hover > .button-menubutton-dropmarker
 {
 	background-color: var(--popup-button-hover);
 }
 
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):-moz-any(:hover:active, [open], [checked]),
-:-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):-moz-any(:hover:active, [open], [checked]),
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker
 {
 	background-color: var(--popup-dark);
 	color: var(--popup-light);
