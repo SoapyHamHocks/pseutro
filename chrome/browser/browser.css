@@ -394,6 +394,12 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 	opacity: .4;
 }
 
+.toolbarbutton-1 .toolbarbutton-icon
+{
+	max-width: 18px;
+	max-height: 18px;
+}
+
 .toolbarbutton-1 > .toolbarbutton-icon,
 .toolbarbutton-1 > .toolbarbutton-menubutton-button > .toolbarbutton-icon
 {

@@ -105,6 +105,11 @@ button:not([buttondown]):-moz-any(:hover:active, [open]) > .button-menubutton-dr
 	color: var(--popup-dark);
 }
 
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) .dropmarker-icon
+{
+	filter: var(--fill-dark-base);
+}
+
 :not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([disabled=true]):hover,
 :not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttonover]):hover > .button-menubutton-dropmarker
 {
@@ -116,6 +121,11 @@ button:not([buttondown]):-moz-any(:hover:active, [open]) > .button-menubutton-dr
 {
 	background-color: var(--popup-dark);
 	color: var(--popup-light);
+}
+
+:not(#theme-test-panel-theme):-moz-any(panel, tabmodalprompt, richlistitem[selected=true]:not([type=download]):not(.addon-view)) button:not([buttondown]):-moz-any(hover:active, [open]) > .button-menubutton-dropmarker > .dropmarker-icon
+{
+	filter: var(--fill-light-base);
 }
 
 /* .......... dropmarkers .......... */
