@@ -1592,6 +1592,11 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker
 	list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
 }
 
+.popup-notification-icon[popupid=servicesInstall]
+{
+	list-style-image: url(chrome://browser/skin/services-64.png);
+}
+
 .addon-progress-description
 {
 	width: 350px;
@@ -1896,25 +1901,9 @@ toolbarbutton.chevron > .toolbarbutton-menu-dropmarker
 	border: 0 !important;
 }
 
-#addon-bar
-{
-	min-height: 28px;
-}
-
 #status-bar
 {
 	min-width: 0;
-}
-
-#addon-bar[customizing] > #status-bar
-{
-	opacity: .4;
-}
-
-#addon-bar .toolbarbutton-1
-{
-	box-shadow: none;
-	border: 0;
 }
 
 .click-to-play-plugins-notification-content

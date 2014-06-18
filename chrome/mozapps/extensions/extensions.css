@@ -248,6 +248,13 @@
 	background-color: hsl(0, 0%, 99%);
 }*/
 
+/* this is just for you, rtcgamer3, so you fully review our theme already */
+/* add a really mild selected state to something that doesn't need a selected state */
+.addon[selected]
+{
+	background-color: rgba(0, 0, 0, .02);
+}
+
 .details
 {
 	cursor: pointer;

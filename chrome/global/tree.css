@@ -256,7 +256,7 @@ treecol:hover:active .treecol-sortdirection
 
 .treecol-image:hover:active > .tree-columnpicker-icon
 {
-	filter: var(--fill-light-base);
+	filter: var(--fill-dark-base);
 }
 
 /* ::::: gridline style ::::: */
