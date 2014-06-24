@@ -158,6 +158,8 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	width: 24.77em !important;
+	/* prevents premature overflow */
+	padding-bottom: 3px;
 }
 
 toolbarpaletteitem[place="palette"] > toolbaritem > toolbarbutton
