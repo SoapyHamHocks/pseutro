@@ -198,7 +198,7 @@ menuitem[type=checkbox][checked=true] > .menu-iconic-left
 
 menuitem[type=radio][checked=true] > .menu-iconic-left
 {
-	background-image: -moz-image-rect(url(icons/menuitem-radio), 0, 12, 12, 0);
+	background-image: -moz-image-rect(url(icons/menuitem-radio.png), 0, 12, 12, 0);
 }
 
 /* ::::: menuseparator ::::: */

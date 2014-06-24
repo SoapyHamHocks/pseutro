@@ -505,6 +505,10 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 #bookmarks-menu-button .toolbarbutton-menubutton-dropmarker
 {
 	list-style-image: url(SVGs/bookmarks-menu.svg);
+	border: 4px solid transparent;
+	-moz-border-start-width: 0;
+	padding: 5px;
+	background-clip: padding-box;
 }
 
 /* used for animation - just gets in the way */
@@ -3328,50 +3332,55 @@ line.box-model-guide-left {
 }
 
 .gclitoolbar-input-node,
-.gclitoolbar-complete-node {
-  margin: 0;
-  -moz-box-align: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 8px;
-  text-shadow: none;
-  box-shadow: none;
-  border-width: 0;
-  background-color: transparent;
+.gclitoolbar-complete-node
+{
+	margin: 0;
+	-moz-box-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 8px;
+	text-shadow: none;
+	box-shadow: none;
+	border-width: 0;
+	background-color: transparent;
 }
 
-.gclitoolbar-input-node {
-  -moz-appearance: none;
-  color: hsl(210,30%,85%);
-  padding-left: 20px;
-  background-color: #242b33;
-  background-repeat: no-repeat;
-  background-position: 4px center;
-  box-shadow: 0 1px 1px hsla(206,37%,4%,.2) inset,
-              1px 0 0 hsla(206,37%,4%,.2) inset,
-              -1px 0 0 hsla(206,37%,4%,.2) inset;
-  line-height: 32px;
-  outline-style: none;
-  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 16, 16, 0);
+.gclitoolbar-input-node
+{
+	-moz-appearance: none;
+	color: hsl(210,30%,85%);
+	padding-left: 20px;
+	background-color: #242b33;
+	background-repeat: no-repeat;
+	background-position: 4px center;
+	box-shadow: 0 1px 1px hsla(206,37%,4%,.2) inset,
+ 				1px 0 0 hsla(206,37%,4%,.2) inset,
+				-1px 0 0 hsla(206,37%,4%,.2) inset;
+	line-height: 32px;
+	outline-style: none;
+	background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 16, 16, 0);
 }
 
-.gclitoolbar-input-node[focused="true"] {
-  background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
-  background-color: #232e38;
+.gclitoolbar-input-node[focused="true"]
+{
+	background-image: -moz-image-rect(url("chrome://browser/skin/devtools/commandline-icon.png"), 0, 32, 16, 16);
+	background-color: #232e38;
 }
 
-.gclitoolbar-input-node > .textbox-input-box > .textbox-input::-moz-selection {
-  background-color: hsl(210,30%,85%);
-  color: hsl(210,24%,16%);
-  text-shadow: none;
+.gclitoolbar-input-node > .textbox-input-box > .textbox-input::-moz-selection
+{
+	background-color: hsl(210,30%,85%);
+	color: hsl(210,24%,16%);
+	text-shadow: none;
 }
 
-.gclitoolbar-complete-node {
-  padding-left: 21px;
-  background-color: transparent;
-  color: transparent;
-  z-index: 100;
-  pointer-events: none;
+.gclitoolbar-complete-node
+{
+	padding-left: 21px;
+	background-color: transparent;
+	color: transparent;
+	z-index: 100;
+	pointer-events: none;
 }
 
 .gcli-in-incomplete,
@@ -3380,29 +3389,35 @@ line.box-model-guide-left {
 .gcli-in-todo,
 .gcli-in-closebrace,
 .gcli-in-param,
-.gcli-in-valid {
-  margin: 0;
-  padding: 0;
+.gcli-in-valid
+{
+	margin: 0;
+	padding: 0;
 }
 
-.gcli-in-incomplete {
-  border-bottom: 2px dotted #999;
+.gcli-in-incomplete
+{
+	border-bottom: 2px dotted #999;
 }
 
-.gcli-in-error {
-  border-bottom: 2px dotted #F00;
+.gcli-in-error
+{
+	border-bottom: 2px dotted #F00;
 }
 
-.gcli-in-ontab {
-  color: hsl(210,0%,35%);
+.gcli-in-ontab
+{
+	color: hsl(210,0%,35%);
 }
 
-.gcli-in-todo {
-  color: hsl(210,50%,35%);
+.gcli-in-todo
+{
+	color: hsl(210,50%,35%);
 }
 
-.gcli-in-closebrace {
-  color: hsl(0,0%,80%);
+.gcli-in-closebrace
+{
+	color: hsl(0,0%,80%);
 }
 
 /* fix for theme test panel */
@@ -3463,3 +3478,53 @@ line.box-model-guide-left {
 	height: 18px;
 	margin: 7px;
 }
+
+/* experiments for Metro for Firefox */
+
+/*#nav-bar-customization-target
+{
+	height: 40px;
+}
+
+.toolbarbutton-1,
+.toolbarbutton-menubutton-button,
+.toolbarbutton-menubutton-dropmarker
+{
+	min-height: 40px;
+}
+
+.toolbarbutton-1:not([type=menu-button]),
+.toolbarbutton-menubutton-button,
+.toolbarbutton-menubutton-dropmarker
+{
+	background: url(SVGs/circle.svg) center no-repeat;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 34px;
+	margin: 0 !important;
+}
+
+.toolbarbutton-1:not([type=menu-button]):not([disabled=true]):hover,
+.toolbarbutton-menubutton-button:not([disabled=true]):hover,
+.toolbarbutton-1:not([buttonover]):hover > .toolbarbutton-menubutton-dropmarker
+{
+	background-image: url(SVGs/circle-hover.svg);
+}
+
+.toolbarbutton-1:not([type=menu-button]):not([disabled=true]):hover > .toolbarbutton-icon,
+.toolbarbutton-menubutton-button:not([disabled=true]):hover > .toolbarbutton-icon,
+.toolbarbutton-1:not([buttonover]):hover > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon
+{
+	filter: var(--fill-chrome-base) !important;
+}
+
+#urlbar-wrapper
+{
+	height: 40px;
+}
+
+#urlbar
+{
+	margin: 8px 0 !important;
+	padding: 0 !important;
+}*/
