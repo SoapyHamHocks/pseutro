@@ -1100,11 +1100,6 @@ toolbar:not(#TabsToolbar) .toolbarbutton-menubutton-button:-moz-any([open], [che
 
 /* ::::: content area ::::: */
 
-#sidebar
-{
-	background-color: Window;
-}
-
 #sidebar-title
 {
 	-moz-padding-start: 0;

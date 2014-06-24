@@ -68,13 +68,17 @@ toolbarbutton:not([disabled=true]):-moz-any([checked=true], [open], :hover:activ
 
 /* ::::: toolbarbutton menu-button ::::: */
 
-toolbarbutton[type=menu-button]
+toolbarbutton[type=menu-button],
+toolbarbutton[type=menu-button]:hover,
+toolbarbutton[type=menu-button]:hover:active,
+toolbarbutton[type=menu-button][open],
+toolbarbutton[type=menu-button][checked]
 {
 	-moz-box-align: stretch;
 	-moz-box-orient: horizontal !important;
-	border: 0 !important;
-	background: 0 !important;
-	padding: 0 !important;
+	border: 0;
+	background: 0;
+	padding: 0;
 }
 
 /*.toolbarbutton-menubutton-button

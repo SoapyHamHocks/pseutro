@@ -35,7 +35,6 @@ dialog,
 wizard,
 prefwindow
 {
-	-moz-appearance: window;
 	background-color: var(--dark-base);
 	color: var(--text-light-regular);
 	font: message-box;

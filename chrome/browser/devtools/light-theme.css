@@ -503,6 +503,13 @@ div.CodeMirror span.eval-text {
   list-style-image: url("chrome://browser/skin/devtools/dropmarker.png");
   -moz-box-align: center;
   padding: 0 3px;
+	background: 0;
+	border: 0 ;
+}
+
+.devtools-toolbarbutton .dropmarker-icon
+{
+	filter: none;
 }
 
 /* Toolbar button groups */
