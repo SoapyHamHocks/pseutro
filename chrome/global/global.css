@@ -344,11 +344,10 @@ label[disabled=true]
 /* ::: Generic close buttons ::: */
 
 .tab-close-button,
-#addonbar-closebutton,
 .tabs-closebutton,
 .findbar-closebutton,
 .messageCloseButton,
-.devtools-closebutton
+.close-icon:not(.tab-close-button)
 {
 	margin: -4px 0;
 	padding: 4px;
@@ -361,11 +360,10 @@ label[disabled=true]
 }
 
 .tab-close-button > .toolbarbutton-icon,
-#addonbar-closebutton > .toolbarbutton-icon,
 .tabs-closebutton > .toolbarbutton-icon,
 .findbar-closebutton > .toolbarbutton-icon,
 .messageCloseButton,
-.devtools-closebutton > .toolbarbutton-icon
+.close-icon > .toolbarbutton-icon
 {
 	visibility: inherit;
 	display: inherit;
@@ -374,21 +372,19 @@ label[disabled=true]
 }
 
 .tab-close-button:hover,
-#addonbar-closebutton:hover,
 .tabs-closebutton:hover,
 .findbar-closebutton:hover,
 .messageCloseButton:hover,
-.devtools-closebutton:hover
+.close-icon:hover
 {
 	list-style-image: url(chrome://browser/skin/SVGs/close-hover.svg);
 }
 
 .tab-close-button:hover:active,
-#addonbar-closebutton:hover:active,
 .tabs-closebutton:hover:active,
 .findbar-closebutton:hover:active,
 .messageCloseButton:hover:active,
-.devtools-closebutton:hover:active
+.close-icon:hover:active
 {
 	list-style-image: url(chrome://browser/skin/SVGs/close-active.svg);
 }

@@ -507,10 +507,10 @@ toolbarpaletteitem[place="palette"] > #search-container
 	min-width: 7ch;
 }
 
-#BMB_bookmarksPopup > menuitem[checked="true"] > .menu-iconic-left
+/*#BMB_bookmarksPopup > menuitem[checked="true"] > .menu-iconic-left
 {
 	display: none;
-}
+}*/
 
 #PanelUI-contents #zoom-out-btn
 {
