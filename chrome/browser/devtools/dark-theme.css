@@ -1060,7 +1060,7 @@ div.CodeMirror span.eval-text {
   opacity: 1;
 }
 
-.theme-dark #toolbox-tabs .devtools-tab[selected] {
+.theme-dark :-moz-any(#toolbox-tabs, #toolbox-option-container) .devtools-tab[selected] {
   color: #f5f7fa;
   background-color: #1a4666;
   box-shadow: 0 2px 0 #d7f1ff inset,
@@ -1068,12 +1068,17 @@ div.CodeMirror span.eval-text {
               0 -2px 0 rgba(0,0,0,.2) inset;
 }
 
-.theme-light #toolbox-tabs .devtools-tab[selected] {
+.theme-light :-moz-any(#toolbox-tabs, #toolbox-option-container) .devtools-tab[selected] {
   color: #f5f7fa;
   background-color: #4c9ed9;
   box-shadow: 0 2px 0 #d7f1ff inset,
               0 8px 3px -5px #2b82bf inset,
               0 -2px 0 rgba(0,0,0,.06) inset;
+}
+
+#toolbox-option-container .devtools-tab[selected]
+{
+	-moz-padding-end: 0;
 }
 
 .devtools-tab[selected]:not(:first-child),
@@ -1144,4 +1149,10 @@ div.CodeMirror span.eval-text {
 
 .devtools-invisible-splitter {
   border-color: transparent;
+}
+
+.toolbox-dock-button,
+.devtools-closebutton
+{
+	background: none;
 }

@@ -3474,52 +3474,33 @@ line.box-model-guide-left {
 	margin: 7px;
 }
 
-/* experiments for Metro for Firefox */
+/* full screen warning */
 
-/*#nav-bar-customization-target
+
+#full-screen-warning-container[obscure-browser]
 {
-	height: 40px;
+	background-color: rgba(0, 0, 0, .5);
 }
 
-.toolbarbutton-1,
-.toolbarbutton-menubutton-button,
-.toolbarbutton-menubutton-dropmarker
+#full-screen-warning-container > hbox
 {
-	min-height: 40px;
+	background-color: rgba(0, 0, 0, .5);
 }
 
-.toolbarbutton-1:not([type=menu-button]),
-.toolbarbutton-menubutton-button,
-.toolbarbutton-menubutton-dropmarker
+#full-screen-warning-container[obscure-browser] > hbox
 {
-	background: url(SVGs/circle.svg) center no-repeat;
-	border: 0 !important;
-	padding: 0 !important;
-	width: 34px;
-	margin: 0 !important;
+	background-color: var(--dark-base);
 }
 
-.toolbarbutton-1:not([type=menu-button]):not([disabled=true]):hover,
-.toolbarbutton-menubutton-button:not([disabled=true]):hover,
-.toolbarbutton-1:not([buttonover]):hover > .toolbarbutton-menubutton-dropmarker
+#full-screen-warning-message
 {
-	background-image: url(SVGs/circle-hover.svg);
+	padding: 20px 20px;
 }
 
-.toolbarbutton-1:not([type=menu-button]):not([disabled=true]):hover > .toolbarbutton-icon,
-.toolbarbutton-menubutton-button:not([disabled=true]):hover > .toolbarbutton-icon,
-.toolbarbutton-1:not([buttonover]):hover > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon
+#full-screen-domain-text
 {
-	filter: var(--fill-chrome-base) !important;
+	font-size: 350%;
+	font-family: var(--font-segoelight);
+	text-align: center;
+	padding-bottom: 10px;
 }
-
-#urlbar-wrapper
-{
-	height: 40px;
-}
-
-#urlbar
-{
-	margin: 8px 0 !important;
-	padding: 0 !important;
-}*/
